@@ -1,0 +1,10 @@
+.btn-outline-primary {
+    color: transparent;
+    border-color: white;
+  }
+  
+  .btn-outline-primary:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+  }
