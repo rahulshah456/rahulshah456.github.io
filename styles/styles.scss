@@ -1,0 +1,53 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.material-icons {
+  font-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: auto;
+  width: auto;
+}
+
+
+$theme-colors: (
+  "primary": #71F9A8,
+  "dark": #25262A,
+  "gray-dark":#2D2E32,
+);
+
+.btn-outline-primary {
+    color:  #71F9A8;
+    background-color: transparent;
+    border-color: #71F9A8;
+
+}
+.btn-outline-primary:hover {
+  color: black;
+  background-color:#71F9A8;
+  border-color: #71F9A8;
+}
+
+
+
+.btn-success {
+  color: white;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.btn-success:focus, .btn-success.focus {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
