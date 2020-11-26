@@ -4,6 +4,16 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 
+body {
+  font-family: JetBrains Mono Regular;
+}
+
+.nav {text-transform: capitalize;}
+.nav a{
+  color: white !important;
+  font-size: 1.2em !important;
+  }
+
 .material-icons {
   font-size: inherit;
   display: inline-flex;

@@ -10802,6 +10802,19 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+body {
+  font-family: JetBrains Mono Regular;
+}
+
+.nav {
+  text-transform: capitalize;
+}
+
+.nav a {
+  color: white !important;
+  font-size: 1.2em !important;
+}
+
 .material-icons {
   font-size: inherit;
   display: -webkit-inline-box;
