@@ -10,6 +10,7 @@ $background--color-light: #2D2E32;
 $primary-color: #1089ff;
 $icon--color:#1a1b1e;
 $font--color:#ffffff;
+$font--color-light: #bbbbbb;
 $font--primary:'JetBrainsMono';
 $transition--length: .8;
 
@@ -23,18 +24,41 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.content-seperator {
+	background-color: rgba(255, 255, 255, 0.199);
+}
+
+.content-page{
+	width: 100%;
+	height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: $background--color-light;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $font--color-light
+}
+
+
 // For Desktop Devices - 768px to largest
 @media(min-width:768px) {
-	.home-content {
+	#home {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: stretch;
-		&__headline{
-		  font-weight: 500;
-		  color: $font--color;
-		  font-size: calc(5vw + 10px);
-		}
+	}
+
+	.home-content__headline{
+		font-weight: 500;
+		color: $font--color;
+		font-size: calc(5vw + 10px);
 	}
   
 	.editor {
@@ -47,7 +71,7 @@ body{
 	.card {
 	  width: 35vw;
 	  height: 20vw;
-	  margin-left: 1vw;
+	//   margin-left: 1vw;
 	  margin-right: 2vw;
 	}
   
@@ -84,12 +108,14 @@ body{
 			flex-direction: row;
 			justify-content: space-evenly;
 			list-style-type: none; 
-	  }
+		}
 
-	  .nav__list-item {
-		margin: calc(2vw + 10px);
-		font-size: calc(2vw + 10px);
-	}
+		.nav__list-item {
+			margin: calc(2vw + 10px);
+			font-size: calc(2vw + 10px);
+		}
+
+	  
 	}
 
 	@media(orientation: portrait) {
@@ -104,15 +130,16 @@ body{
 			flex-direction: column;
 			justify-content: space-evenly;
 			list-style-type: none; 
-	  }
+		}
 
-	  .nav__list-item {
-		margin: calc(2vw + 10px);
-		font-size: calc(4vw + 10px);
-	}
+		.nav__list-item {
+			margin: calc(2vw + 10px);
+			font-size: calc(4vw + 10px);
+		}
+	  
 	}
 
-	.home-content {
+	#home {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -139,24 +166,22 @@ body{
 //                 Home Page - START
 //----------------------------------------------------------------
 
-//main page content
-.home-content{
-	width: 100%;
-	height: 100vh;
-}
-
 .header {
   padding: 4vw;
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #download_resume_button{
-  padding: 10px;
-  margin: 0;
-  width: calc(10vw + 20px);
+	margin-top: calc(1vw + 10px);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+  	
 }
 
 .card {
@@ -165,6 +190,27 @@ body{
 
 //----------------------------------------------------------------
 //                 Home Page - START
+//----------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------
+//                 Experience Page - START
+//----------------------------------------------------------------
+
+#experience {
+	padding: 4vw;
+}
+
+.content-header {
+	font-weight: 500;
+	color: $font--color;
+	text-transform: uppercase;
+	font-size: calc(2vw + 10px);
+}
+
+//----------------------------------------------------------------
+//                 Experience Page - START
 //----------------------------------------------------------------
 
 
