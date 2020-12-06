@@ -4,104 +4,235 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 
-:root {
-  font-size: 16px;
-  --bg-primary: #e5e5e5;
-  --bg-primary-light: #eeeeee;
-  --bg-secondary: #1089ff;
-  --bg-secondary-dark: #23374d;
-  --transition-speed: 600ms;
+//custom variable declarations
+$background--color:#1a1b1e;
+$primary-color: #1089ff;
+$icon--color:#1a1b1e;
+$font--color:#ffffff;
+$font--primary:'JetBrainsMono';
+$transition--length: .8;
+
+
+body{
+	background-color: $background--color;
+	font-family: $font--primary;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  font-family: JetBrainsMono;
-  background-color: #1a1b1e;
+
+//----------------------------------------------------------------
+//                 Home Page - START
+//----------------------------------------------------------------
+
+@media(min-width:768px) {
+  .home-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: stretch;
+      &__headline{
+        font-weight: 500;
+        color: $font--color;
+        font-size: calc(5vw + 10px);
+      }
+  }
+
+  .card {
+    width: 45vw;
+    height: 25vw;
+    margin-left: 1vw;
+    margin-right: 2vw;
+  }
+  
 }
 
+@media(max-width:768px) {
+  .home-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: stretch;
+      &__headline{
+        font-weight: 500;
+        color: $font--color;
+        font-size: calc(8vw + 10px);
+      }
+  }
 
-.display-4 {
-  color: white;
-  font-size: 12vh;
-  font-style: normal;
-  font-weight: 500;
+  .card {
+    width: 75vw;
+    height: 45vw;
+    margin-bottom: 2vw;
+  }
+  
 }
 
-.nav {text-transform: capitalize;}
-.nav a{
-  color: white !important;
-  font-size: 1.2em !important;
+//main page content
+.home-content{
+	width: 100%;
+  height: 100vh;
 }
 
-.nav-link {
-  color: var(--bg-primary);
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
-}
-
-.nav-link:hover {
-  filter: grayscale(0%) opacity(1);
-  color: var(--bg-primary);
-}
-
-.navbar {
-  background-color: #1a1b1e;
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.navbar-brand {
-  margin: 0;
-  padding: 0;
-}
-
-.material-icons {
-  font-size: inherit;
-  display: inline-flex;
-  align-items: center;
+.header {
+  padding: 4vw;
+  flex: 1;
+  display: flex;
   justify-content: center;
-  vertical-align: middle;
-  height: auto;
-  width: auto;
+  align-items: center;
 }
 
-
-$theme-colors: (
-  "primary": #71F9A8,
-  "dark": #25262A,
-  "gray-dark":#2D2E32,
-);
-
-.btn-outline-primary {
-    color:  #71F9A8;
-    background-color: transparent;
-    border-color: #71F9A8;
-
-}
-.btn-outline-primary:hover {
-  color: black;
-  background-color:#71F9A8;
-  border-color: #71F9A8;
+.editor {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+//----------------------------------------------------------------
+//                 Home Page - START
+//----------------------------------------------------------------
 
 
-.btn-success {
-  color: white;
-  background-color: #28a745;
-  border-color: #28a745;
+
+//----------------------------------------------------------------
+//                 Ovarlay Navbar - START
+//----------------------------------------------------------------
+
+.nav{
+	$width: 100vw;
+	$height: 100vh;
+	$font--size--calc: calc(2vw + 10px);
+	$transition--easing: cubic-bezier(.77,0,.175,1);
+	position: fixed;
+	z-index:1;
+	padding: 0;
+	margin: 0;
+	&:before,&:after{
+		content: "";
+		position: fixed;
+		width:$width;
+		height:$height;
+		background: rgba(#eaeaea, .2);
+		z-index: -1;
+		transition: transform $transition--easing $transition--length + s;
+		transform: translateX(0%) translateY(-100%);
+	}
+	&:after{
+		background: $primary-color;
+		transition-delay: 0s;
+	}
+	&:before{
+		transition-delay: .1s;
+	}
+	&__content{
+		position: fixed;
+		top:50%;
+		transform: translate(0%,-50%);
+		width: 100%;
+    text-align: center;
+		font-size: $font--size--calc;
+		font-weight: 200;
+		cursor: pointer;
+	}
+	&__list-item{
+		position: relative;
+		display: inline-block;
+		transition-delay: $transition--length + s;
+    opacity: 0;
+    color: $font--color;
+		transform: translate(0%, 100%);
+		transition: opacity .2s ease, transform .3s ease;
+		margin-right: 25px;
+		&:before{
+			content: "";
+			position: absolute;
+			background: $font--color;
+			width: calc(0.5vw + 20px);
+			height: calc(0.2vw + 2px);
+			top: 100%;
+			transform: translate(0%, 0%);
+			transition: all .3s ease;
+			z-index: -1;
+		}
+		&:hover{
+			&:before{
+				width: 100%;
+			}
+		}
+	}
 }
-.btn-success:hover {
-  color: #fff;
-  background-color: #218838;
-  border-color: #1e7e34;
+
+//default state
+.menu-icon{
+	$size: 30px;
+	height: $size;
+	width: $size;
+	position: fixed;
+	z-index:2;
+	right: calc(2vw + 50px);
+	top: calc(1.5vw + 50px);
+	cursor: pointer;
+	&__line{
+		height: 2px;
+		width: $size;
+		display: block;
+		background-color: $font--color;
+		margin-bottom: 4px;
+		transition: transform .2s ease, background-color .5s ease;
+	}
+	&__line-left{
+		width: $size / 2;
+	}
+	&__line-right{
+		width: $size / 2;
+		float: right;
+	}
 }
-.btn-success:focus, .btn-success.focus {
-  color: #fff;
-  background-color: #218838;
-  border-color: #1e7e34;
-  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+
+//active state
+body.nav-active{
+	$menu--items--count: 5;
+	.menu-icon{
+		&__line{
+			background-color: white;
+			transform: translateX(0px) rotate(-45deg);
+		}
+		&__line-left{
+			transform: translateX(1px) rotate(45deg);
+		}
+		&__line-right{
+			transform: translateX(-2px) rotate(45deg);
+		}
+	}
+	.nav{
+		visibility:visible;
+		&:before,&:after{
+			transform: translateX(0%) translateY(0%);
+		}
+		&:after{
+			transition-delay: .1s;
+		}
+		&:before{
+			transition-delay: 0s;
+		}
+		&__list-item{
+			opacity: 1;
+			transform: translateX(0%);
+			transition: opacity .3s ease, transform .3s ease, color .3s ease;
+			@for $i from 0 through $menu--items--count {
+				&:nth-child(#{$i}){
+					transition-delay: $transition--length * $i / 8 + .5 + s;
+				}
+			}
+		}
+	}
 }
+
+//----------------------------------------------------------------
+//                  Ovarlay Navbar - END
+//----------------------------------------------------------------
+
+

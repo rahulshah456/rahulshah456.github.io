@@ -26,79 +26,38 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body">
+<body>
+    <div class="menu-icon">
+        <span class="menu-icon__line menu-icon__line-left"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line menu-icon__line-right"></span>
+    </div>
 
-    <section id="header">
-
-        <!--This is the main navigation bar fixed at the top-->
-        <nav class="navbar navbar-expand-lg fixed-top">
-
-            <a class="navbar-brand" href="#">
-                <img src="/res/drawables/logo.svg" width="75" height="75" alt="">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHam"
-                aria-controls="navbarHam" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarHam">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">HOME<span></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SKILLS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">EXPERIENCE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PROJECTS</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-
-    </section>
-
-
-    <section id="intro">
-
-        <div class="container" style="margin-top: 10%;">
-
-
-            <h1 class="display-4">Hey! <br>I'm Rahul, <br>Developer & <br>Designer_</h1>
-
-           <!--
-                <ol>
-                <li>
-                    <button type="button" class="btn btn-primary">
-                        Contact me
-                        <i class="material-icons">chevron_right</i>
-                    </button>
-                </li>
-
-                <li>
-                    <button type="button" class="btn btn-outline-primary" style="margin-left: 2%;">
-                        Resume
-                        <i class="material-icons">cloud_download</i>
-                    </button>
-                </li>
-            </ol>
-           -->
-
-
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item">Home</li>
+                <li class="nav__list-item">Skills</li>
+                <li class="nav__list-item">Experience</li>
+                <li class="nav__list-item">Projects</li>
+                <li class="nav__list-item">About</li>
+            </ul>
         </div>
+    </div>
 
 
-    </section>
+    <div class="home-content">
+        <div class="header">
+            <h1 class="home-content__headline">Hey! <br>I'm Rahul, <br>Developer & <br>Designer_</h1>
+        </div>
+        <div class="editor">
+            <div class="card text-white bg-dark">
 
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
