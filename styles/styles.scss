@@ -6,6 +6,7 @@
 
 //custom variable declarations
 $background--color:#1a1b1e;
+$background--color-light: #2D2E32;
 $primary-color: #1089ff;
 $icon--color:#1a1b1e;
 $font--color:#ffffff;
@@ -22,73 +23,120 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 }
 
+// For Desktop Devices - 768px to largest
+@media(min-width:1024px) {
+	.home-content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: stretch;
+		&__headline{
+		  font-weight: 500;
+		  color: $font--color;
+		  font-size: calc(5vw + 10px);
+		}
+	}
+  
+	.editor {
+	  flex: 1;
+	  display: flex;
+	  justify-content: flex-start;
+	  align-items: center;
+	}
+  
+	.card {
+	  width: 35vw;
+	  height: 20vw;
+	  margin-left: 1vw;
+	  margin-right: 2vw;
+	}
+  
+	.nav__list {
+	  height: 100%;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-evenly;
+	  list-style-type: none; 
+	}
+
+
+	.nav__list-item {
+		margin: calc(2vw + 10px);
+		font-size: calc(2vw + 10px);
+	}
+	
+}
+  
+
+//For Mobile Devices - Zero to 768px
+@media(max-width:1024px) {
+	.home-content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: stretch;
+		&__headline{
+		  font-weight: 500;
+		  color: $font--color;
+		  font-size: calc(10vw + 10px);
+		}
+	}
+  
+	.editor {
+	  	flex: 0;
+	  	display: none;
+	}
+  
+	.card {
+	  	width: 75vw;
+	  	height: 65vw;
+	  	margin-left: 5vw;
+	  	margin-bottom: 2vw;
+	  	margin-right: 2vw;
+	}
+	
+  
+	.nav__list {
+	  	display: flex;
+	  	flex-direction: column;
+	  	justify-content: space-evenly;
+	  	list-style-type: none; 
+	}
+
+	.nav__list-item {
+		margin: calc(2vw + 10px);
+		font-size: calc(4vw + 10px);
+	}
+}
+
+
 
 //----------------------------------------------------------------
 //                 Home Page - START
 //----------------------------------------------------------------
 
-@media(min-width:768px) {
-  .home-content {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: stretch;
-      &__headline{
-        font-weight: 500;
-        color: $font--color;
-        font-size: calc(5vw + 10px);
-      }
-  }
-
-  .card {
-    width: 45vw;
-    height: 25vw;
-    margin-left: 1vw;
-    margin-right: 2vw;
-  }
-  
-}
-
-@media(max-width:768px) {
-  .home-content {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: stretch;
-      &__headline{
-        font-weight: 500;
-        color: $font--color;
-        font-size: calc(8vw + 10px);
-      }
-  }
-
-  .card {
-    width: 75vw;
-    height: 45vw;
-    margin-bottom: 2vw;
-  }
-  
-}
-
 //main page content
 .home-content{
 	width: 100%;
-  height: 100vh;
+	height: 100vh;
 }
 
 .header {
   padding: 4vw;
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.editor {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#download_resume_button{
+  padding: 10px;
+  margin: 0;
+  width: calc(10vw + 20px);
+}
+
+.card {
+	background-color: $background--color-light;
 }
 
 //----------------------------------------------------------------
@@ -139,7 +187,6 @@ body{
 	}
 	&__list-item{
 		position: relative;
-		display: inline-block;
 		transition-delay: $transition--length + s;
     opacity: 0;
     color: $font--color;
@@ -172,8 +219,8 @@ body{
 	width: $size;
 	position: fixed;
 	z-index:2;
-	right: calc(2vw + 50px);
-	top: calc(1.5vw + 50px);
+	right: calc(1vw + 30px);
+	top: calc(1.5vw + 30px);
 	cursor: pointer;
 	&__line{
 		height: 2px;
@@ -234,5 +281,3 @@ body.nav-active{
 //----------------------------------------------------------------
 //                  Ovarlay Navbar - END
 //----------------------------------------------------------------
-
-
