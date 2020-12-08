@@ -17,10 +17,10 @@ $font--primary:'JetBrainsMono';
 $transition--length: .8;
 
 
-:root {
-	--primary: #1089ff;
-	--success: #71F9A8;
-}
+// :root {
+// 	--primary: #1089ff;
+// 	--success: #71F9A8;
+// }
   
 
 
@@ -275,11 +275,72 @@ body::-webkit-scrollbar-thumb {
 .year_of_experience {
 	margin: 0;
 	padding: 0;
-	font-size: calc(16vw + 16vh);
+	font-size: calc(14vw + 14vh);
 	color: $font--color-light;
 	font-weight: 800;
 	opacity: 0.1;
 }
+
+.exp_company {
+	color: $primary-color; 
+	font-size: 1.8vmin;
+}
+
+.position_div {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	margin-bottom: 2.5vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.pos_btn {
+	display: flex;
+	margin-top: 1.5vh;
+	align-content: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: white;
+	font-size: 4vmin;
+	font-weight: 500;
+}
+
+.pos_btn.slide_right::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	background-color: $white;
+
+	/* animate and time the transitions*/
+	transition: transform 250ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+.pos_btn.slide_right {
+	z-index: 1;
+	transition: color 250ms ease-in-out;
+}
+
+.pos_btn.slide_right:hover::before ,
+.pos_btn.slide_right:focus::before {
+	transform: scaleX(1);
+}
+
+.pos_btn.slide_right:hover,
+.pos_btn.slide_right:focus {
+	color: black;
+}
+
+
 
 
 //----------------------------------------------------------------
