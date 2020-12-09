@@ -16,7 +16,7 @@ $font--color-light: #bbbbbb;
 $font--primary:'JetBrainsMono';
 $transition--length: .8;
 
-$navbar_height: calc(2.5vh + 2.5vw);
+$navbar_height: 10vh;
 $button_margin_h: calc(1vw + 1vh);
 $button_margin_v: calc(0.5vw + 0.5vh);
 
@@ -68,7 +68,7 @@ body{
 }
 
 .navbar-brand {
-	font-size: $font_size_normal;
+	font-size: $navbar_height / 3;
 }
 
 #brand_image {

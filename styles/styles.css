@@ -10848,15 +10848,15 @@ body {
 }
 
 #horizontal_navbar {
-  height: calc(2.5vh + 2.5vw);
+  height: 10vh;
 }
 
 .navbar-brand {
-  font-size: calc(1vw + 1vh);
+  font-size: 3.33333vh;
 }
 
 #brand_image {
-  height: calc(2.5vh + 2.5vw);
+  height: 10vh;
   width: auto;
 }
 
@@ -10889,7 +10889,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-  margin-top: calc(2.5vh + 2.5vw);
+  margin-top: 10vh;
 }
 
 @media (min-width: 1024px) {
