@@ -10834,14 +10834,30 @@ body {
 .content-page {
   width: 100%;
   height: 100vmin;
-  padding: 4vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
 
 .content-header {
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: calc(2.5vw + 10px);
+  font-size: calc(2vw + 2vh);
+}
+
+#horizontal_navbar {
+  height: calc(2.5vh + 2.5vw);
+}
+
+.navbar-brand {
+  font-size: calc(1vw + 1vh);
+}
+
+#brand_image {
+  height: calc(2.5vh + 2.5vw);
+  width: auto;
 }
 
 .nav__list-item {
@@ -10860,27 +10876,24 @@ body::-webkit-scrollbar-thumb {
   background: #bbbbbb;
 }
 
-@media (min-width: 768px) {
-  #home {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-  }
-  .home-content__headline {
-    font-weight: 500;
-    color: #ffffff;
-    font-size: calc(5vw + 10px);
-  }
-  .editor {
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  margin-top: calc(2.5vh + 2.5vw);
+}
+
+@media (min-width: 1024px) {
+  .container_editor {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -10894,7 +10907,7 @@ body::-webkit-scrollbar-thumb {
         -ms-flex-align: center;
             align-items: center;
   }
-  .card {
+  .card_editor {
     width: 35vw;
     height: 20vw;
     margin-right: 2vw;
@@ -10919,12 +10932,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
-  .home-content__headline {
-    font-weight: 500;
-    color: #ffffff;
-    font-size: calc(5vw + 10px);
-  }
+@media (max-width: 1024px) and (orientation: landscape) {
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10944,12 +10952,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
-  .home-content__headline {
-    font-weight: 500;
-    color: #ffffff;
-    font-size: calc(10vw + 10px);
-  }
+@media (max-width: 1024px) and (orientation: portrait) {
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10969,28 +10972,14 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 768px) {
-  #home {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-  }
-  .editor {
+@media (max-width: 1024px) {
+  .container_editor {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
     display: none;
   }
-  .card {
+  .card_editor {
     width: 75vw;
     height: 65vw;
     margin-left: 5vw;
@@ -11008,10 +10997,32 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.header {
-  padding-top: 8vh;
-  padding-right: 4vw;
-  padding-bottom: 4vw;
+.home-content__headline {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: calc(4vw + 4vh);
+}
+
+#home {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 90vmin;
+}
+
+.container_home {
+  padding: 0;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.container_header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -11030,16 +11041,55 @@ body::-webkit-scrollbar-thumb {
           align-items: flex-start;
 }
 
-#download_resume_button {
-  margin-top: calc(1vw + 10px);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+.container_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.card {
+#download_resume_button {
+  padding-left: calc(1vw + 1vh);
+  padding-right: calc(1vw + 1vh);
+  padding-top: calc(0.5vw + 0.5vh);
+  padding-bottom: calc(0.5vw + 0.5vh);
+  font-size: calc(0.6vw + 0.6vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 100;
+  background: #1089ff;
+  width: auto;
+  height: auto;
+}
+
+.card_editor {
   background-color: #2D2E32;
+  margin: auto;
+}
+
+.editor_top {
+  width: 100%;
+  height: 10%;
+  background: black;
+}
+
+.dot {
+  height: calc(0.3vw + 0.3vh);
+  width: calc(0.3vw + 0.3vh);
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 #experience {
@@ -11194,7 +11244,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item {
   padding-left: calc(1vw + 8px);
-  font-size: 14px;
+  font-size: calc(0.6vw + 0.6vh);
 }
 
 .nav-link {
@@ -11214,20 +11264,16 @@ body::-webkit-scrollbar-thumb {
 .navbar {
   background-color: #1a1b1e;
   margin: 0;
-  padding-left: 4vw;
+  padding-left: 8vw;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 10vw;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 100;
+  padding-right: 8vw;
   border-bottom: 0.2px solid #2D2E32;
 }
 
 .navbar-brand {
   margin: 0;
   padding: 0;
-  font-weight: 100;
   color: white;
 }
 
