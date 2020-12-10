@@ -16,21 +16,64 @@ $font--color-light: #bbbbbb;
 $font--primary:'JetBrainsMono';
 $transition--length: .8;
 
-$navbar_height: 10vh;
-$button_margin_h: calc(1vw + 1vh);
-$button_margin_v: calc(0.5vw + 0.5vh);
+$navbar_height: calc(6vh + 2vw);
 
-$font_size_extra_small: calc(0.3vw + 0.3vh);
-$font_size_small: calc(0.6vw + 0.6vh);
-$font_size_normal: calc(1vw + 1vh);
-$font_size_large: calc(2vw + 2vh);
-$font_size_huge: calc(4vw + 4vh);
+$button_margin_h: 3vmax;
+$button_margin_v: 2vmin;
+$border_radius: 0.8vmin;
+
+
+
+$font_size_small_x: calc(0.6vw + 0.6vh);
+$font_size_small_xx: calc(0.4vw + 0.4vh);
+$font_size_small_xxx: calc(0.2vw + 0.2vh);
+
+$font_size_normal_x: calc(1.2vw + 1.2vh);
+$font_size_normal_xx: calc(1vw + 1vh);
+$font_size_normal_xxx: calc(0.8vw + 0.8vh);
+
+$font_size_medium_x: calc(1.8vw + 1.8vh);
+$font_size_medium_xx: calc(1.6vw + 1.6vh);
+$font_size_medium_xxx: calc(1.4vw + 1.4vh);
+
+$font_size_large_x: calc(2.6vw + 2.6vh);
+$font_size_large_xx: calc(2.2vw + 2.2vh);
+$font_size_large_xxx: calc(2vw + 2vh);
+
+$font_size_huge_x: calc(4vw + 4vh);
+$font_size_huge_xx: calc(3.5vw + 3.5vh);
+$font_size_huge_xxx: calc(3vw + 3vh);
+
+$font_size_header_x: calc(36vmin);
+$font_size_header_xx: calc(12vw + 12vh);
+$font_size_header_xxx: calc(10vw + 10vh);
 
 
 // :root {
 // 	--primary: #1089ff;
 // 	--success: #71F9A8;
 // }
+
+// For Desktop Devices - 1024px to largest
+@media(min-width:1024px) {
+
+	.container_editor {
+	  flex: 1;
+	  display: flex;
+	  justify-content: flex-start;
+	  align-items: center;
+	}
+}
+  
+//For Mobile Devices - Zero to 1024px
+@media(max-width:1024px) {
+
+	.container_editor {
+	  	flex: 0;
+	  	display: none;
+	}
+}
+
   
 
 
@@ -60,7 +103,11 @@ body{
 	font-weight: 800;
 	color: $font--color;
 	text-transform: uppercase;
-	font-size: $font_size_large;
+	font-size: $font_size_large_x;
+}
+
+.material-icons {
+	color: white;
 }
 
 #horizontal_navbar {
@@ -93,113 +140,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-#home {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: stretch;
-	margin-top: $navbar_height;
-	//background: yellow;
-}
-
-// For Desktop Devices - 768px to largest
-@media(min-width:1024px) {
-  
-	.container_editor {
-	  flex: 1;
-	  display: flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	}
-  
-	.card_editor {
-	  width: 35vw;
-	  height: 20vw;
-	//   margin-left: 1vw;
-	  margin-right: 2vw;
-	}
-  
-	.nav__list {
-	  height: 100%;
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: space-evenly;
-	  list-style-type: none; 
-	}
-
-
-	.nav__list-item {
-		margin: calc(2vw + 10px);
-		font-size: calc(2vw + 10px);
-	}
-	
-}
-  
-//For Mobile Devices - Zero to 768px
-@media(max-width:1024px) {
-
-
-	@media(orientation: landscape) {
-
-		.nav__list {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			list-style-type: none; 
-		}
-
-		.nav__list-item {
-			margin: calc(2vw + 10px);
-			font-size: calc(2vw + 10px);
-		}
-
-	  
-	}
-
-	@media(orientation: portrait) {
-
-		.nav__list {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			list-style-type: none; 
-		}
-
-		.nav__list-item {
-			margin: calc(2vw + 10px);
-			font-size: calc(4vw + 10px);
-		}
-	  
-	}
-
-	.container_editor {
-	  	flex: 0;
-	  	display: none;
-	}
-  
-	.card_editor {
-	  	width: 75vw;
-	  	height: 65vw;
-	  	margin-left: 5vw;
-	  	margin-bottom: 2vw;
-	  	margin-right: 2vw;
-	}
-}
-
-
-@media(max-width:1024px) {
-	
-	.menu-icon {
-		display:block!important;
-	}
-
-	#horizontal_nav_menu {
-		display: none;
-	}
-}
-
-
-
 //----------------------------------------------------------------
 //                 Home Page - START
 //----------------------------------------------------------------
@@ -207,15 +147,20 @@ body::-webkit-scrollbar-thumb {
 .home-content__headline{
 	font-weight: 600;
 	color: $font--color;
-	font-size: $font_size_huge;
+	font-size: $font_size_huge_x;
 }
 
 #home {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: stretch;
+	margin-top: $navbar_height;
 	align-content: center;
 	height: 90vmin;
+	//background: yellow;
 }
 
-//@todo
 .container_home {
 	padding: 0;
 	height: auto;
@@ -239,19 +184,32 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: row;
 }
 
-#download_resume_button{
+.download_resume_button {
+	margin-top: 2vmin;
 	padding-left: $button_margin_h;
 	padding-right: $button_margin_h;
 	padding-top: $button_margin_v;
 	padding-bottom: $button_margin_v;
-	font-size: $font_size_small;
+	font-size: $font_size_normal_xxx;
+	box-shadow: 0 6px 32px rgba(0,0,0,.55);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	font-weight: 100;
+	font-weight: 500;
+	color: white;
 	background: $primary-color;
+	border-radius: $border_radius;
+	border: none;
 	width: auto;
 	height: auto;
+	transition: 200ms ease-in-out;
+}
+
+.download_resume_button:hover,
+.download_resume_button:focus {
+	box-shadow: 0 6px 32px #71F9A8;
+	background: #71F9A8;
+	color: black;
 }
 
 // .container_editor {
@@ -259,19 +217,27 @@ body::-webkit-scrollbar-thumb {
 // }
 
 .card_editor {
-	background-color: $background--color-light;
+	width: 35vw;
+	height: 20vw;
+	background : $background--color-light;
 	margin :auto;
+	box-shadow: 0 6px 32px rgba(0,0,0,.55);
+	border-collapse: separate; 
+	border-radius: $border_radius;
 }
 
 .editor_top {
 	width: 100%;
 	height: 10%;
+	padding-left: 5%;
 	background: black;
+	border-top-left-radius: $border_radius;
+	border-top-right-radius: $border_radius;
 }
 
 .dot {
-	height: $font_size_extra_small;
-  	width: $font_size_extra_small;
+	height: $font_size_small_xx;
+  	width: $font_size_small_xx;
   	background-color: #bbb;
   	border-radius: 50%;
 	display: inline-block;
@@ -331,7 +297,7 @@ body::-webkit-scrollbar-thumb {
 .year_of_experience {
 	margin: 0;
 	padding: 0;
-	font-size: calc(14vw + 14vh);
+	font-size: $font_size_header_x;
 	color: $font--color-light;
 	font-weight: 800;
 	opacity: 0.1;
@@ -343,8 +309,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .position_div {
-	padding-left: 1vw;
-	padding-right: 1vw;
 	margin-bottom: 2.5vh;
 	display: flex;
 	flex-direction: column;
@@ -411,7 +375,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item {
 	padding-left: calc(1vw + 8px);
-	font-size: $font_size_small;
+	font-size: $font_size_small_x;
 }
 
 .nav-link {
@@ -439,149 +403,50 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   padding: 0;
   color: white;
+  font-size: $font_size_normal_x;
 }
 
-.menu-icon{
-	$size: 30px;
-	height: auto;
-	width: $size;
-	margin: 0;
-	padding: 0;
-	display: none;
-	position: fixed;
-	z-index:2;
-	right: 10vw;
-	cursor: pointer;
-	&__line{
-		height: 2px;
-		width: $size;
-		display: block;
-		background-color: $font--color;
-		margin-bottom: 4px;
-		transition: transform .2s ease, background-color .5s ease;
+.navbar-toggler {
+	z-index: 10;
+}
+
+
+@media (max-width: 992px) {
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+		right: 0;
+		width: 60vmin;
+		background-color: $background--color-light;
+		padding-right: 8vw;
+		padding-top: 8vh;
+		height: 100%;
+		text-align: right;
+		box-shadow: 0 6px 32px rgba(0,0,0,.55);
 	}
-	&__line-left{
-		width: $size / 2;
+	
+	.nav-item {
+		font-size: $font_size_medium_xxx;
 	}
-	&__line-right{
-		width: $size / 2;
-		float: right;
-	}
+
+    .navbar-collapse.collapsing {
+        height: 100%;
+        right: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        height: 100%;
+        right: 0;
+        transition: right 400ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: right 400ms ease-in;
+    }
 }
 
 //----------------------------------------------------------------
 //					Horizontal Navbar - START
-//----------------------------------------------------------------
-
-
-
-
-//----------------------------------------------------------------
-//                 Ovarlay Navbar - START
-//----------------------------------------------------------------
-
-.nav{
-	$width: 100vw;
-	$height: 100vh;
-	$font--size--calc: calc(2vw + 10px);
-	$transition--easing: cubic-bezier(.77,0,.175,1);
-	position: fixed;
-	z-index:1;
-	padding: 0;
-	margin: 0;
-	&:before,&:after{
-		content: "";
-		position: fixed;
-		width:$width;
-		height:$height;
-		background: rgba(#eaeaea, .2);
-		z-index: -1;
-		transition: transform $transition--easing $transition--length + s;
-		transform: translateX(0%) translateY(-100%);
-	}
-	&:after{
-		background: $primary-color;
-		transition-delay: 0s;
-	}
-	&:before{
-		transition-delay: .1s;
-	}
-	&__content{
-		position: fixed;
-		top:50%;
-		transform: translate(0%,-50%);
-		width: 100%;
-    	text-align: center;
-		font-size: $font--size--calc;
-		font-weight: 200;
-		cursor: pointer;
-	}
-	&__list-item{
-		position: relative;
-		transition-delay: $transition--length + s;
-    opacity: 0;
-    color: $font--color;
-		transform: translate(0%, 100%);
-		transition: opacity .2s ease, transform .3s ease;
-		margin-right: 25px;
-		&:before{
-			content: "";
-			position: absolute;
-			background: $font--color;
-			width: calc(0.5vw + 20px);
-			height: calc(0.2vw + 2px);
-			top: 100%;
-			transform: translate(0%, 0%);
-			transition: all .3s ease;
-			z-index: -1;
-		}
-		&:hover{
-			&:before{
-				width: 100%;
-			}
-		}
-	}
-}
-
-//active state
-body.nav-active{
-	$menu--items--count: 5;
-	.menu-icon{
-		&__line{
-			background-color: white;
-			transform: translateX(0px) rotate(-45deg);
-		}
-		&__line-left{
-			transform: translateX(1px) rotate(45deg);
-		}
-		&__line-right{
-			transform: translateX(-2px) rotate(45deg);
-		}
-	}
-	.nav{
-		visibility:visible;
-		&:before,&:after{
-			transform: translateX(0%) translateY(0%);
-		}
-		&:after{
-			transition-delay: .1s;
-		}
-		&:before{
-			transition-delay: 0s;
-		}
-		&__list-item{
-			opacity: 1;
-			transform: translateX(0%);
-			transition: opacity .3s ease, transform .3s ease, color .3s ease;
-			@for $i from 0 through $menu--items--count {
-				&:nth-child(#{$i}){
-					transition-delay: $transition--length * $i / 8 + .5 + s;
-				}
-			}
-		}
-	}
-}
-
-//----------------------------------------------------------------
-//                  Ovarlay Navbar - END
 //----------------------------------------------------------------

@@ -34,55 +34,37 @@
 
 <body>
 
-    <!--Expendable Overlay Navbar Menu-->
-    <div class="nav">
-        <div class="nav__content">
-            <ul class="nav__list">
-                <li class="nav__list-item">Home</li>
-                <li class="nav__list-item">Skills</li>
-                <li class="nav__list-item">Experience</li>
-                <li class="nav__list-item">Projects</li>
-                <li class="nav__list-item">About</li>
-            </ul>
-        </div>
-    </div>
-
-
-
-     <!--This is the main navigation bar fixed at the top-->
-     <nav class="navbar navbar-expand-lg fixed-top" id="horizontal_navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 
         <a class="navbar-brand" href="#">
             <img src="res/drawables/logo.svg" alt="" id="brand_image">
             <strong>Rahul </strong> Shah
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons">menu</span>
+        </button>
 
-        <!--NavBar Menu Icon-->
-        <div class="menu-icon">
-            <span class="menu-icon__line menu-icon__line-left"></span>
-            <span class="menu-icon__line"></span>
-            <span class="menu-icon__line menu-icon__line-right"></span>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="horizontal_nav_menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EXPERIENCE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+            </ul>
         </div>
-        
-        <!--NavBar Horizontal Menu-->
-        <ul class="navbar-nav ml-auto" id="horizontal_nav_menu">
-            <li class="nav-item">
-                <a class="nav-link" href="#">HOME<span></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SKILLS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">EXPERIENCE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">PROJECTS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
-            </li>
-        </ul>
-
     </nav>
 
 
@@ -90,7 +72,7 @@
         <div class="container_home">
             <div class="container_header">
                 <h1 class="home-content__headline">Hey! <br>I'm Rahul, <br>Developer & <br>Designer_</h1>
-                <button class="pos_btn slide_right" id="download_resume_button">
+                <button class="download_resume_button">
                     VIEW PROJECTS
                 </button>
             </div>
