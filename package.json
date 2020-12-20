@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rahulshah456/dev-portfolio#readme",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "tilt.js": "^1.2.1"
   }
 }

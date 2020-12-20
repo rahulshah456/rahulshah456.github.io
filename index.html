@@ -11,12 +11,14 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="styles/jet_brains_mono.css">
+    <link rel="stylesheet" href="res/fonts/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
@@ -34,71 +36,104 @@
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <!--Desktop Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbar__desktop">
 
         <a class="navbar-brand" href="#">
-            <img src="res/drawables/logo.svg" alt="" id="brand_image">
-            <strong>Rahul </strong> Shah
+            <!-- <img src="res/drawables/logo_dark.svg" class="d-inline-block align-center" 
+                alt="" id="brand_image"> -->
+            <strong>Rahul</strong> Kumar Shah
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="material-icons">menu</span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarToggler">
-
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="horizontal_nav_menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOME</a>
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SKILLS</a>
+                    <a class="nav-link" href="#">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EXPERIENCE</a>
+                    <a class="nav-link" href="#">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PROJECTS</a>
+                    <a class="nav-link" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
         </div>
     </nav>
 
 
+    <!--Mobile Navbar-->
+    <nav class="nav__mobile">
+        <a href="#" class="nav__link nav__link--active">
+            <i class="material-icons md-24 nav__icon">home</i>
+            <span class="nav__text">Home</span>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="material-icons md-24 nav__icon">code</i>
+            <span class="nav__text">Skills</span>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="material-icons md-24 nav__icon">work</i>
+            <span class="nav__text">Experience</span>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="material-icons md-24 nav__icon">dashboard</i>
+            <span class="nav__text">Projects</span>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="material-icons md-24 nav__icon">person</i>
+            <span class="nav__text">About</span>
+        </a>
+    </nav>
+
+
+    <!--Home Page-->
     <div class="content-page" id="home">
         <div class="container_home">
-            <div class="container_header">
-                <h1 class="home-content__headline">Hey! <br>I'm Rahul, <br>Developer & <br>Designer_</h1>
-                <button class="download_resume_button">
+
+            <!--Main Intro Block-->
+            <div class="block_header">
+                <h1 class="block_header__headline">
+                    I Turn Visions Into Stunning Digital Experiences_
+                </h1>
+                <div class="block_work_info">
+                    <p>Software Developer and Designer based in India</p>
+                </div>
+                <button class="block_header_button">
                     VIEW PROJECTS
                 </button>
             </div>
-            <div class="container_editor">
-                <div class="card_editor">
-                    <div class="editor_top">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
+
+            <!--Phone Block only for desktop devices-->
+            <div class="block_phone">
+                <img src="./res/drawables/mobile_frame_white.svg">
+                <!-- <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_4ayeqfsd.json"  
+                    background="transparent"  
+               speed="1"  loop controls autoplay></lottie-player> -->
             </div>
-        </div>
-        <div>
-            <!--TODO-->
+
         </div>
     </div>
 
     <hr class="content-seperator">
 
+
+    <!--Skills Page-->
     <div class="content-page" id="skills">
         <h1 class="content-header">Skills</h1>
+        <p class="text-name">
+            <span>Rahul Kumar Shah&nbsp;&nbsp;</span>
+        </p>
     </div>
 
     <hr class="content-seperator">
 
+
+    <!--Experience Page-->
     <div class="content-page" id="experience">
         <h1 class="content-header">Experience</h1>
         <div class="exp_blocks">
@@ -142,17 +177,30 @@
 
     <hr class="content-seperator">
 
+
+    <!--Projects Page-->
     <div class="content-page" id="projects">
         <h1 class="content-header">Projects</h1>
+        <div class="container_projects">
+            <div>
+
+            </div>
+
+        </div>
     </div>
 
     <hr class="content-seperator">
 
+
+    <!--About Page-->
     <div class="content-page" id="about">
         <h1 class="content-header">About</h1>
     </div>
 
+
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 
 </html>

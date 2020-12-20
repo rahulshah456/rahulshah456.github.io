@@ -1,29 +1,13 @@
-console.clear();
 
-const app = (() => {
-	let body;
-	let menu;
-	let menuItems;
-	
-	const init = () => {
-		body = document.querySelector('body');
-		menu = document.querySelector('.menu-icon');
-		menuItems = document.querySelectorAll('.nav__list-item');
+// Desktop Navbar State Changer
+$("#navbar__desktop .nav-link").on("click", function(){
+	$("#navbar__desktop").find(".active").removeClass("active");
+	$(this).addClass("active");
+});
 
-		applyListeners();
-	}
-	
-	const applyListeners = () => {
-		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-	}
-	
-	const toggleClass = (element, stringClass) => {
-		if(element.classList.contains(stringClass))
-			element.classList.remove(stringClass);
-		else
-			element.classList.add(stringClass);
-	}
-	
-	init();
-})();
 
+// Mobile Navbar State Changer
+$(".nav__mobile .nav__link").on("click", function(){
+	$(".nav__mobile").find(".nav__link--active").removeClass("nav__link--active");
+	$(this).addClass("nav__link--active");
+});
