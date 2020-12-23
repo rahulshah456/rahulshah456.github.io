@@ -11,3 +11,6 @@ $(".nav__mobile .nav__link").on("click", function(){
 	$(".nav__mobile").find(".nav__link--active").removeClass("nav__link--active");
 	$(this).addClass("nav__link--active");
 });
+
+
+//$('skills_box').height($('skills_box').width());

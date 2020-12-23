@@ -10829,18 +10829,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  color: rgba(255, 255, 255, 0.3);
-  padding: 0;
-  margin: 0;
-}
-
-h1 {
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-
 body::-webkit-scrollbar {
   width: 1vmin;
 }
@@ -10862,7 +10850,6 @@ body::-webkit-scrollbar-thumb {
   height: 100vmin;
   padding-left: 8vw;
   padding-right: 8vw;
-  padding-bottom: 4vw;
 }
 
 .content-header {
@@ -10931,6 +10918,38 @@ body::-webkit-scrollbar-thumb {
   z-index: -2;
 }
 
+.primary-color {
+  color: #246BFE;
+}
+
+.primary-bg {
+  background: #246BFE;
+}
+
+.dark-color {
+  color: black;
+}
+
+.white-color {
+  color: white;
+}
+
+.white-bg {
+  background: white;
+}
+
+.white-light-bg {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark-bg {
+  background: #1a1b1e;
+}
+
+.dark-light-bg {
+  background: #2D2E32;
+}
+
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10944,10 +10963,9 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-  margin-top: 8vmin;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 90vmin;
+  height: 90vh;
 }
 
 .container__home {
@@ -10980,14 +10998,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-.block__header-headline {
-  font-weight: bold;
-  color: #ffffff;
-  padding: 0;
-  margin: 0;
-  font-size: calc(4vw + 4vh);
 }
 
 .block__header-headline .highlight {
@@ -11066,29 +11076,137 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.skills__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+#skills {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 4vmin;
 }
 
-.lang__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 80vh;
-  margin-right: 3vmax;
+.skills__card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: #2D2E32;
-  border-radius: 8px;
+  border-radius: 0.5vmin;
+  border-top: 1vmin solid black;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skills__card:hover, .skills__card:focus {
+  -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+  border-top: 1vmin solid #246BFE;
+  -webkit-transform: translate(0, -1vmin);
+          transform: translate(0, -1vmin);
+}
+
+.skills__header {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.skills_box {
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.skills_box_rect {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1vmin;
+}
+
+.box-logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.box__container {
+  margin: 10%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1vmin;
+  height: 60%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+/* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to MAX
+*/
+@media (min-width: 1025px) {
+  /* CSS */
+  .skills__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 4vmax;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+  .skills__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 4vmax;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+	##Device = Tablets, Ipads (landscape)
+	##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+  .skills__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 4vmin;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+	##Device = Low Resolution Tablets, Mobiles (Landscape)
+	##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .skills__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 4vmax;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+	##Device = Most of the Smartphones Mobiles (Portrait)
+	##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .skills__container {
+    display: -ms-grid;
+    display: grid;
+    gap: 4vmin;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 #experience {
@@ -11288,7 +11406,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 992px) {
   .navbar-brand {
-    font-size: calc(1.6vw + 1.6vh);
+    font-size: calc(1.4vw + 1.4vh);
   }
 }
 
@@ -11366,5 +11484,89 @@ body::-webkit-scrollbar-thumb {
   .nav__mobile {
     display: none;
   }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.heavy-bold {
+  font-weight: 900;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(4vw + 4vh);
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(3vw + 3vh);
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(2.2vw + 2.2vh);
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(1.6vw + 1.6vh);
+}
+
+h5 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(1.2vw + 1.2vh);
+}
+
+h6 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: calc(0.8vw + 0.8vh);
 }
 /*# sourceMappingURL=styles.css.map */

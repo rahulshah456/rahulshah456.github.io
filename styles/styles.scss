@@ -69,18 +69,6 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 }
 
-p {
-	color: rgba(255, 255, 255, 0.3);
-	padding: 0;
-	margin: 0;
-}
-
-h1 {
-	padding: 0;
-	margin: 0;
-	color: white;
-}
-
 body::-webkit-scrollbar {
     width: 1vmin;
 }
@@ -112,7 +100,7 @@ body::-webkit-scrollbar-thumb {
 	height: 100vmin;
 	padding-left: 8vw;
 	padding-right: 8vw;
-	padding-bottom: 4vw;
+	//padding-bottom: 4vw;
 }
 
 .content-header {
@@ -163,6 +151,38 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+.primary-color {
+	color: $primary-color;
+}
+
+.primary-bg {
+	background: $primary-color;
+}
+
+.dark-color {
+	color: black;
+}
+
+.white-color {
+	color: white;
+}
+
+.white-bg {
+	background: white;
+}
+
+.white-light-bg {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.dark-bg {
+	background: $background--color;
+}
+
+.dark-light-bg {
+	background: $background--color-light;
+}
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -174,10 +194,8 @@ body::-webkit-scrollbar-thumb {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: stretch;
-	margin-top: $navbar_height;
 	align-content: center;
-	height: 90vmin;
-	// background: yellow;
+	height: 90vh;
 }
 
 .container__home {
@@ -196,14 +214,6 @@ body::-webkit-scrollbar-thumb {
 	justify-content: center;
 	align-items: flex-start;
 	//background: purple;
-}
-
-.block__header-headline {
-	font-weight: bold;
-	color: $font--color;
-	padding: 0;
-	margin: 0;
-	font-size: $font_size_huge_x;
 }
 
 .block__header-headline .highlight {
@@ -279,23 +289,129 @@ body::-webkit-scrollbar-thumb {
 
 //++++++++++++++++++++++++++++++++++++ SKILLS +++++++++++++++++++++++++++++++++++++++
 
-
-.skills__container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	//background: greenyellow;
-	flex-wrap: wrap;
+#skills {
+	height: fit-content;
+	padding-bottom: 4vmin;
 }
 
-.lang__container {
-	flex: 1;
-	height: 80vh;
-	margin-right: 3vmax;
+.skills__card {
+	height: fit-content;
 	background: $background--color-light;
-	//box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-	border-radius: 8px;
+	border-radius: 0.5vmin;
+	border-top: 1vmin solid black;
+	transition: 250ms ease-in-out;
+	box-shadow: 0 20px 20px rgba(0,0,0,.08);
 }
+
+.skills__card:hover, .skills__card:focus {
+	box-shadow: 0 40px 40px rgba(0,0,0,.16);
+	border-top: 1vmin solid $primary-color;
+	transform: translate(0, -1vmin);
+}
+
+.skills__header {
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+.skills_box {
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.skills_box_rect {
+	height: fit-content;
+	padding: 1vmin;
+}
+
+.box-logo img {
+	height: 100%;
+	width: 100%;
+}
+
+.box__container {
+	margin: 10%;
+	display: grid;
+	gap: 1vmin;
+	height: 60%;
+	grid-template-columns: repeat(3, 1fr);
+	//grid-auto-rows: minmax(100px, auto);
+}
+
+  
+/* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to MAX
+*/
+@media (min-width: 1025px) {
+	
+	/* CSS */
+	.skills__container {
+		display: grid;
+		gap: 4vmax;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+}
+  
+/* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+	
+	/* CSS */
+	.skills__container {
+		display: grid;
+		gap: 4vmax;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+  
+/* 
+	##Device = Tablets, Ipads (landscape)
+	##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	
+	/* CSS */
+	.skills__container {
+		display: grid;
+		gap: 4vmin;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+}
+
+/* 
+	##Device = Low Resolution Tablets, Mobiles (Landscape)
+	##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+	
+	.skills__container {
+		display: grid;
+		gap: 4vmax;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+
+/* 
+	##Device = Most of the Smartphones Mobiles (Portrait)
+	##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+	
+	.skills__container {
+		display: grid;
+		gap: 4vmin;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+}
+
 
 
 
@@ -462,7 +578,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 992px) {
 	.navbar-brand {
-		font-size: $font_size_medium_xx;
+		font-size: $font_size_medium_xxx;
 	}
 }
 
@@ -479,8 +595,8 @@ body::-webkit-scrollbar-thumb {
 
 //++++++++++++++++++++++++++++++++++ NAVBAR MOBILE +++++++++++++++++++++++++++++++++++
 
-@media (max-width: 992px) {
 
+@media (max-width: 992px) {
 
 	.nav__mobile {
 		position: fixed;
@@ -538,5 +654,99 @@ body::-webkit-scrollbar-thumb {
 	
 }
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//===============================================================================
 
+
+//+++++++++++++++++++++++++++++++ FONT WEIGHTS ++++++++++++++++++++++++++++++++++
+
+.italic {
+	font-style: italic;
+}
+
+.heavy-bold {
+	font-weight: 900;
+}
+
+.extra-bold {
+	font-weight: 800;
+}
+
+.semi-bold {
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.regular {
+	font-weight: normal;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.thin {
+	font-weight: 100;
+}
+
+//================================================================================
+
+
+//++++++++++++++++++++++++++++++++++ FONT SIZE CHANGES +++++++++++++++++++++++++++
+
+p {
+	color: rgba(255, 255, 255, 0.3);
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_huge_x;
+}
+
+h2 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_huge_xxx
+}
+
+h3 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_large_xx;
+}
+
+h4 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_medium_xx;
+}
+
+h5 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_normal_x;
+}
+
+h6 {
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: $font_size_normal_xxx;
+}
+
+
+//==================================================================================
