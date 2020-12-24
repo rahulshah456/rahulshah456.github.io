@@ -414,11 +414,12 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: column;
 	width: fit-content;
 	border-left: 2px solid white;
-	padding-left: 4vw;
+	padding-left: 4vmax;
 }
 
 .exp__card {
 	margin-bottom: 4vmin;
+	position: relative;
 }
 
 .exp__card::before {
@@ -427,7 +428,11 @@ body::-webkit-scrollbar-thumb {
 	width: 1vmin;
 	height: 1vmin;
 	border-radius: 50%;
+	background-color: $primary-color;
 	border: 1vmin solid $primary-color;
+	position: absolute;
+	top: 15%;
+	left: -4.5vmax;
 }
 
 .exp__card-header {
