@@ -14,3 +14,9 @@ $(".nav__mobile .nav__link").on("click", function(){
 
 
 //$('skills_box').height($('skills_box').width());
+
+$('.exp__card').on('mouseenter', function(){
+	$(this).find('.exp__card-body').toggle();
+}).on('mouseleave', function(){
+	$(this).find('.exp__card-body').toggle();
+})

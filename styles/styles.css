@@ -10864,7 +10864,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .material-icons.md-18 {
-  font-size: 18px;
+  font-size: 1.4vmax;
 }
 
 .material-icons.md-24 {
@@ -10966,6 +10966,20 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .block__header-headline .highlight {
@@ -11004,6 +11018,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   width: auto;
   height: auto;
+  pointer-events: auto;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
@@ -11016,6 +11031,8 @@ body::-webkit-scrollbar-thumb {
 .block__phone img {
   height: auto;
   width: 60%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 @media (min-width: 1024px) {
@@ -11221,12 +11238,18 @@ body::-webkit-scrollbar-thumb {
   width: -moz-fit-content;
   width: fit-content;
   border-left: 2px solid white;
-  padding-left: 4vmax;
+  padding-left: calc(3vw + 3vh);
 }
 
 .exp__card {
   margin-bottom: 4vmin;
   position: relative;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  -ms-transition: opacity 0.5s linear;
 }
 
 .exp__card::before {
@@ -11239,7 +11262,7 @@ body::-webkit-scrollbar-thumb {
   border: 1vmin solid #246BFE;
   position: absolute;
   top: 15%;
-  left: -4.5vmax;
+  left: calc(-3.5vw - 3.5vh);
 }
 
 .exp__card-header {
@@ -11249,6 +11272,12 @@ body::-webkit-scrollbar-thumb {
 .exp__card-body {
   padding: 1vmin 2vmin;
   display: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  -ms-transition: opacity 0.5s linear;
 }
 
 .exp__card-footer {
