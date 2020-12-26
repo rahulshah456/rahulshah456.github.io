@@ -31,6 +31,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
+        
+    <script src="./node_modules/typedJS/typed.js"></script>
 
 </head>
 
@@ -99,10 +101,10 @@
 
             <!--Main Intro Block-->
             <div class="block__header">
-                <h1 class="block__header-headline bold" id="typed-strings">
-                    I Turn
-                    <span class="highlight">Visions</span>
-                    Into Stunning Digital Experiences_
+                <h1 class="block__header-headline bold">
+                    <span id="introduction">
+                       
+                    </span>
                 </h1>
                 <div class="block__header-info">
                     <p>Software Developer and Designer based in India</p>
@@ -122,6 +124,21 @@
 
         </div>
     </div>
+
+    <script>
+        var options = {
+            strings: [
+                'Hello World',
+                'I Turn <span class="highlight">Visions</span> Into Stunning Digital Experiences'
+            ],
+            typeSpeed: 50,
+            startDelay: 250,
+            showCursor: true,
+            cursorChar: '_'
+        };
+
+        var typed = new Typed('#introduction', options);
+    </script>
 
     <hr class="content-seperator">
 
@@ -457,8 +474,7 @@
 
 
     <script src="script.js"></script>
-    <script src="./node_modules/typed/typed.js" type="text/javascript"></script>
-    <script src="./automation.js" type="text/javascript"></script>
+    <script src="./automation.js"></script>
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 </body>
 
