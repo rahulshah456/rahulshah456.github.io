@@ -105,10 +105,10 @@
       </a>
     </nav>
 
-    <!-- <iframe style="position: absolute;"  width="100%" height="92%" 
+    <iframe style="position: absolute;"  width="100%" height="92%" 
         src='https://my.spline.design/darkbackground-ae292ec8d8f1fe2153978179673f8e07/' 
         frameborder='0'>
-    </iframe> -->
+    </iframe>
 
     <!--Home Page-->
     <div class="content__page" id="home">
@@ -465,12 +465,12 @@
           <hr class="horizontal-seperator" />
           <ul class="social__buttons">
             <li>
-              <a href="#">
+              <a href="https://github.com/rahulshah456">
                 <i class="fab fa-github"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/rahul-kumar-shah-4b1b7b113/">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
@@ -480,13 +480,15 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://dribbble.com/rahulshah456">
                 <i class="fas fa-basketball-ball"></i>
               </a>
             </li>
           </ul>
           <hr class="horizontal-seperator" />
-         
+          <p class="color-white">
+            Redefining quality of life by solving complex social challenges
+          </p>
           <br />
           <p class="light color-white-light">
             Hello, I am currently an undergraduate student at GGSIPU, Dwarka and
@@ -494,6 +496,7 @@
             Innovative live projects that solve real-world problems and
             collaborated with talented people to create digital products for
             both business and product use.
+            <br />
             <br />
             Hello, I am currently an undergraduate student at GGSIPU, Dwarka and
             pursuing my Bachelor's in Information Technology. I've worked on
@@ -522,19 +525,21 @@
               <div class="form-group col-md-6">
                 <label class="color-white" for="inputEmail4">Name</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="inputEmail4"
+                  id="inputName"
                   placeholder="Name"
+                  required=""
                 />
               </div>
               <div class="form-group col-md-6">
                 <label class="color-white" for="inputPassword4">Email</label>
                 <input
-                  type="password"
+                  type="email"
                   class="form-control"
-                  id="inputPassword4"
+                  id="inputEmail"
                   placeholder="Email"
+                  required=""
                 />
               </div>
             </div>
@@ -543,13 +548,20 @@
               <input
                 type="text"
                 class="form-control"
-                id="inputAddress"
+                id="inputSubject"
                 placeholder="Subject"
               />
             </div>
             <div class="form-group">
               <label class="color-white" for="inputAddress2">Message</label>
-              <textarea class="form-control" id="message2" name="message2" required="" rows="5"></textarea>
+              <textarea
+                class="form-control"
+                id="inputMessage"
+                placeholder="Message"
+                name="message"
+                required=""
+                rows="5"
+              ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
           </form>
