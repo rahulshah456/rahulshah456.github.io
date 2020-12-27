@@ -1,481 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rahul Kumar Shah</title>
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="styles/jet_brains_mono.css">
-    <link rel="stylesheet" href="res/fonts/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/jet_brains_mono.css" />
+    <link rel="stylesheet" href="res/fonts/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-        crossorigin="anonymous"></script>
-        
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./node_modules/typedJS/typed.js"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!--Desktop Navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbar__desktop">
-
-        <a class="navbar-brand" href="#">
-            <!-- <img src="res/drawables/logo_dark.svg" class="d-inline-block align-center" 
-                alt="" id="brand_image"> -->
-            <strong>Rahul</strong> Kumar Shah
-        </a>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="horizontal_nav_menu">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
-        </div>
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark"
+      id="navbar__desktop"
+    >
+      <a class="navbar-brand" href="#">
+        <!-- <img src="res/drawables/logo_dark.svg" class="d-inline-block align-center" 
+                        alt="" id="brand_image"> -->
+        <span class="bold color-white"> Rahul </span>
+        <span class="light color-white"> Kumar Shah </span>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="horizontal_nav_menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
 
     <!--Mobile Navbar-->
     <nav class="nav__mobile">
-        <a href="#" class="nav__link nav__link--active">
-            <i class="material-icons md-24 nav__icon">home</i>
-            <span class="nav__text">Home</span>
-        </a>
-        <a href="#" class="nav__link">
-            <i class="material-icons md-24 nav__icon">code</i>
-            <span class="nav__text">Skills</span>
-        </a>
-        <a href="#" class="nav__link">
-            <i class="material-icons md-24 nav__icon">work</i>
-            <span class="nav__text">Experience</span>
-        </a>
-        <a href="#" class="nav__link">
-            <i class="material-icons md-24 nav__icon">dashboard</i>
-            <span class="nav__text">Projects</span>
-        </a>
-        <a href="#" class="nav__link">
-            <i class="material-icons md-24 nav__icon">person</i>
-            <span class="nav__text">About</span>
-        </a>
+      <a href="#" class="nav__link nav__link--active">
+        <i class="material-icons md-24 nav__icon">home</i>
+        <span class="nav__text">Home</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class="material-icons md-24 nav__icon">code</i>
+        <span class="nav__text">Skills</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class="material-icons md-24 nav__icon">work</i>
+        <span class="nav__text">Experience</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class="material-icons md-24 nav__icon">dashboard</i>
+        <span class="nav__text">Projects</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class="material-icons md-24 nav__icon">person</i>
+        <span class="nav__text">About</span>
+      </a>
     </nav>
 
-    <iframe style="position: absolute;"  width="100%" height="92%" src='https://my.spline.design/darkbackground-ae292ec8d8f1fe2153978179673f8e07/' frameborder='0'></iframe>
+    <!-- <iframe style="position: absolute;"  width="100%" height="92%" 
+        src='https://my.spline.design/darkbackground-ae292ec8d8f1fe2153978179673f8e07/' 
+        frameborder='0'>
+    </iframe> -->
 
     <!--Home Page-->
     <div class="content__page" id="home">
-        
-        <div class="container__home">
+      <div class="container__home">
+        <!--Main Intro Block-->
+        <div class="block__header">
+          <h1 class="block__header-headline bold">
+            <span id="introduction"> </span>
+          </h1>
+          <div class="block__header-info">
+            <p>Software Developer and Designer based in India</p>
+          </div>
+          <button class="block__header-button">VIEW PROJECTS</button>
+        </div>
 
-            <!--Main Intro Block-->
-            <div class="block__header">
-                <h1 class="block__header-headline bold">
-                    <span id="introduction">
-                       
-                    </span>
-                </h1>
-                <div class="block__header-info">
-                    <p>Software Developer and Designer based in India</p>
-                </div>
-                <button class="block__header-button">
-                    VIEW PROJECTS
-                </button>
-            </div>
-
-            <!--Phone Block only for desktop devices-->
-            <div class="block__phone">
-                <img src="./res/drawables/mobile_frame_white.svg">
-                <!-- <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_4ayeqfsd.json"  
+        <!--Phone Block only for desktop devices-->
+        <div class="block__phone">
+          <img src="./res/drawables/mobile_frame_white.svg" />
+          <!-- <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_4ayeqfsd.json"  
                     background="transparent"  
                speed="1"  loop controls autoplay></lottie-player> -->
-            </div>
-
         </div>
+      </div>
     </div>
 
-    <script>
-        var options = {
-            strings: [
-                'Hello World',
-                'I Turn <span class="highlight">Visions</span> Into Stunning Digital Experiences'
-            ],
-            typeSpeed: 50,
-            startDelay: 250,
-            showCursor: true,
-            cursorChar: '_'
-        };
-
-        var typed = new Typed('#introduction', options);
-    </script>
-
-    <hr class="content-seperator">
-
+    <hr class="content-seperator" />
 
     <!--Skills Page-->
     <div class="content__page" id="skills">
-        <section class="page__header">
-            <div class="page__header-background">
-                EXPERTISE
-                <div class="page__header-foreground">
-                    <span>Skills&nbsp;</span>
-                </div>
-            </div>
-        </section>
-        <div class="skills__container">
-            <div class="skills__card languages">
-                <div class="skills__header">
-                    <h6 class="subheader color-primary bold">
-                        Programming
-                    </h6>
-                    <h4 class="header thin">
-                        Languages
-                    </h4>
-                </div>
-                <div class="box__container">
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/java.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/c.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/kotlin.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/dart.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/python.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/js.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/html.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/css.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills__card technologies">
-                <div class="skills__header">
-                    <h6 class="subheader color-primary bold">
-                        Dev Tools
-                    </h6>
-                    <h4 class="header thin">
-                        Technologies
-                    </h4>
-                </div>
-                <div class="box__container">
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/studio.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/vscode.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/intellij.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/conda.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/figma.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/postman.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/git.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="skills_box bg-dark">
-                        <div class="box-logo">
-                            <img src="./res/logos/docker.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills__card frameworks">
-                <div class="skills__header">
-                    <h6 class="subheader color-primary bold">
-                        Libraries
-                    </h6>
-                    <h4 class="header thin">
-                        Frameworks
-                    </h4>
-                </div>
-                <div class="rect__container">
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Jetpack</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Retrofit</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">RxJava</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Flask</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Firebase</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">GCP</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">AWS</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">MVVM</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Tensorflow</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">MVP/MVC</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Heroku</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">ExpressJS</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">Swagger.io</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">MongoDB</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">JQuery</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <p class="color-white italic">NodeJS</p>
-                    </div>
-                    <div class="skills_box_rect bg-dark">
-                        <a title="worked while working on android platform"></a>
-                        <p class="color-white italic">SQlite</p>
-                    </div>
-                </div>
-            </div>
+      <section class="page__header">
+        <div class="page__header-background">
+          EXPERTISE
+          <div class="page__header-foreground">
+            <span>Skills&nbsp;</span>
+          </div>
         </div>
-
-
-
+      </section>
+      <div class="skills__container">
+        <div class="skills__card languages">
+          <div class="skills__header">
+            <h6 class="subheader color-primary bold">Programming</h6>
+            <h4 class="header thin">Languages</h4>
+          </div>
+          <div class="box__container">
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/java.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/c.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/kotlin.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/dart.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/python.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/js.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/html.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/css.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__card technologies">
+          <div class="skills__header">
+            <h6 class="subheader color-primary bold">Dev Tools</h6>
+            <h4 class="header thin">Technologies</h4>
+          </div>
+          <div class="box__container">
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/studio.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/vscode.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/intellij.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/conda.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/figma.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/postman.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/git.svg" alt="" />
+              </div>
+            </div>
+            <div class="skills_box bg-dark">
+              <div class="box-logo">
+                <img src="./res/logos/docker.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__card frameworks">
+          <div class="skills__header">
+            <h6 class="subheader color-primary bold">Libraries</h6>
+            <h4 class="header thin">Frameworks</h4>
+          </div>
+          <div class="rect__container">
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Jetpack</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Retrofit</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">RxJava</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Flask</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Firebase</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">GCP</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">AWS</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">MVVM</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Tensorflow</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">MVP/MVC</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Heroku</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">ExpressJS</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">Swagger.io</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">MongoDB</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">JQuery</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <p class="color-white italic">NodeJS</p>
+            </div>
+            <div class="skills_box_rect bg-dark">
+              <a title="worked while working on android platform"></a>
+              <p class="color-white italic">SQlite</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <hr class="content-seperator">
-
+    <hr class="content-seperator" />
 
     <!--Experience Page-->
     <div class="content__page" id="experience">
-        <section class="page__header">
-            <div class="page__header-background">
-                CORPORATE
-                <div class="page__header-foreground">
-                    <span>Experience&nbsp;</span>
-                </div>
-            </div>
-        </section>
-        <div class="timeline__container">
-            <div class="exp__card">
-                <div class="exp__card-header bg-white">
-                    <h4 class="light color-dark">Mobile Developer</h4>
-                    <p class="bold color-primary">INCABLET MEDIA</p>
-                </div>
-                <div class="exp__card-body bg-white-light">
-                    <p class="color-dark-light">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim
-                        ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-                        iusto primis ea eam.
-                    </p>
-                </div>
-                <div class="exp__card-footer bg-white-light">
-                    <h6 class="extra-bold">2020</h6>
-                    <i class="material-icons md-18">expand_more</i>
-                </div>
-            </div>
-            <div class="exp__card">
-                <div class="exp__card-header bg-white">
-                    <h4 class="light color-dark">OpenSource Contributer</h4>
-                    <p class="bold color-primary">ANITAB.ORG</p>
-                </div>
-                <div class="exp__card-body bg-white-light">
-                    <p class="color-dark-light">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim
-                        ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-                        iusto primis ea eam.
-                    </p>
-                </div>
-                <div class="exp__card-footer bg-white-light">
-                    <h6 class="extra-bold">2020</h6>
-                    <i class="material-icons md-18">expand_more</i>
-                </div>
-            </div>
-            <div class="exp__card">
-                <div class="exp__card-header bg-white">
-                    <h4 class="light color-dark">Product Developer: Android</h4>
-                    <p class="bold color-primary">FLOYDWIZ TECHNOLOGIES</p>
-                </div>
-                <div class="exp__card-body bg-white-light">
-                    <p class="color-dark-light">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim
-                        ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-                        iusto primis ea eam.
-                    </p>
-                </div>
-                <div class="exp__card-footer bg-white-light">
-                    <h6 class="extra-bold">2019</h6>
-                    <i class="material-icons md-18">expand_more</i>
-                </div>
-            </div>
-            <div class="exp__card">
-                <div class="exp__card-header bg-white">
-                    <h4 class="light color-dark">Freelance Android Developer</h4>
-                    <p class="bold color-primary">EKLAVYA STUDY POINT</p>
-                </div>
-                <div class="exp__card-body bg-white-light">
-                    <p class="color-dark-light">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim
-                        ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-                        iusto primis ea eam.
-                    </p>
-                </div>
-                <div class="exp__card-footer bg-white-light">
-                    <h6 class="extra-bold">2019</h6>
-                    <i class="material-icons md-18">expand_more</i>
-                </div>
-            </div>
-            <div class="exp__card">
-                <div class="exp__card-header bg-white">
-                    <h4 class="light color-dark">Lead Android Developer</h4>
-                    <p class="bold color-primary">DWARKAWALA</p>
-                </div>
-                <div class="exp__card-body bg-white-light">
-                    <p class="color-dark-light">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim
-                        ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
-                        iusto primis ea eam.
-                    </p>
-                </div>
-                <div class="exp__card-footer bg-white-light">
-                    <h6 class="extra-bold">2018</h6>
-                    <i class="material-icons md-18">expand_more</i>
-                </div>
-            </div>
+      <section class="page__header">
+        <div class="page__header-background">
+          CORPORATE
+          <div class="page__header-foreground">
+            <span>Experience&nbsp;</span>
+          </div>
         </div>
+      </section>
+      <div class="timeline__container">
+        <!------------------------------------------------------------>
+        <div class="exp__card">
+          <div class="exp__card-header bg-dark-light">
+            <h4 class="light color-white">Mobile Developer</h4>
+            <p class="bold color-primary">INCABLET MEDIA</p>
+          </div>
+          <div class="exp__card-body bg-dark">
+            <p class="color-white-light">
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+          <div class="exp__card-footer bg-dark">
+            <h6 class="extra-bold">2020</h6>
+            <i class="material-icons md-18">expand_more</i>
+          </div>
+        </div>
+        <!------------------------------------------------------------>
+        <div class="exp__card">
+          <div class="exp__card-header bg-dark-light">
+            <h4 class="light color-white">OpenSource Contributer</h4>
+            <p class="bold color-primary">ANITAB.ORG</p>
+          </div>
+          <div class="exp__card-body bg-dark">
+            <p class="color-white-light">
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+          <div class="exp__card-footer bg-dark">
+            <h6 class="extra-bold">2020</h6>
+            <i class="material-icons md-18">expand_more</i>
+          </div>
+        </div>
+        <!------------------------------------------------------------>
+        <div class="exp__card">
+          <div class="exp__card-header bg-dark-light">
+            <h4 class="light color-white">Product Developer: Android</h4>
+            <p class="bold color-primary">FLOYDWIZ TECHNOLOGIES</p>
+          </div>
+          <div class="exp__card-body bg-dark">
+            <p class="color-white-light">
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+          <div class="exp__card-footer bg-dark">
+            <h6 class="extra-bold">2019</h6>
+            <i class="material-icons md-18">expand_more</i>
+          </div>
+        </div>
+        <!------------------------------------------------------------>
+        <div class="exp__card">
+          <div class="exp__card-header bg-dark-light">
+            <h4 class="light color-white">Freelance Android Developer</h4>
+            <p class="bold color-primary">EKLAVYA STUDY POINT</p>
+          </div>
+          <div class="exp__card-body bg-dark">
+            <p class="color-white-light">
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+          <div class="exp__card-footer bg-dark">
+            <h6 class="extra-bold">2019</h6>
+            <i class="material-icons md-18">expand_more</i>
+          </div>
+        </div>
+        <!------------------------------------------------------------>
+        <div class="exp__card">
+          <div class="exp__card-header bg-dark-light">
+            <h4 class="light color-white">Lead Android Developer</h4>
+            <p class="bold color-primary">DWARKAWALA</p>
+          </div>
+          <div class="exp__card-body bg-dark">
+            <p class="color-white-light">
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+          <div class="exp__card-footer bg-dark">
+            <h6 class="extra-bold">2018</h6>
+            <i class="material-icons md-18">expand_more</i>
+          </div>
+        </div>
+        <!------------------------------------------------------------>
+      </div>
     </div>
 
-    <hr class="content-seperator">
-
+    <hr class="content-seperator" />
 
     <!--Projects Page-->
     <div class="content__page" id="projects">
-        <section class="page__header">
-            <div class="page__header-background">
-                PORTFOLIO
-                <div class="page__header-foreground">
-                    <span>Projects&nbsp;</span>
-                </div>
-            </div>
-        </section>
-        <div class="container_projects">
-            <div>
-                <h1 class="color-primary">Heading 1</h1>
-                <h2 class="color-primary">Heading 2</h2>
-                <h3 class="color-primary">Heading 3</h3>
-                <h4 class="color-primary">Heading 4</h4>
-                <h5 class="color-primary">Heading 5</h5>
-                <h6 class="color-primary">Heading 6</h6>
-            </div>
-
+      <section class="page__header">
+        <div class="page__header-background">
+          PORTFOLIO
+          <div class="page__header-foreground">
+            <span>Projects&nbsp;</span>
+          </div>
         </div>
+      </section>
+      <div class="container_projects">
+        <div>
+          <h1 class="color-primary">Heading 1</h1>
+          <h2 class="color-primary">Heading 2</h2>
+          <h3 class="color-primary">Heading 3</h3>
+          <h4 class="color-primary">Heading 4</h4>
+          <h5 class="color-primary">Heading 5</h5>
+          <h6 class="color-primary">Heading 6</h6>
+        </div>
+      </div>
     </div>
 
-    <hr class="content-seperator">
-
+    <hr class="content-seperator" />
 
     <!--About Page-->
     <div class="content__page" id="about">
-        <section class="page__header">
-            <div class="page__header-background">
-                WHO AM I
-                <div class="page__header-foreground">
-                    <span>About&nbsp;</span>
-                </div>
-            </div>
-        </section>
-        <div class="container_about">
-
-
-
+      <section class="page__header">
+        <div class="page__header-background">
+          WHO AM I
+          <div class="page__header-foreground">
+            <span>About&nbsp;</span>
+          </div>
         </div>
+      </section>
+      <div class="container__about">
+        <div class="block__info">
+          <h1
+            class="color-primary bold"
+            style="border-radius: 1vmin; text-align: start"
+          >
+            Rahul Kumar Shah
+          </h1>
+          <hr class="horizontal-seperator" />
+          <ul class="social__buttons">
+            <li>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-basketball-ball"></i>
+              </a>
+            </li>
+          </ul>
+          <hr class="horizontal-seperator" />
+         
+          <br />
+          <p class="light color-white-light">
+            Hello, I am currently an undergraduate student at GGSIPU, Dwarka and
+            pursuing my Bachelor's in Information Technology. I've worked on
+            Innovative live projects that solve real-world problems and
+            collaborated with talented people to create digital products for
+            both business and product use.
+            <br />
+            Hello, I am currently an undergraduate student at GGSIPU, Dwarka and
+            pursuing my Bachelor's in Information Technology. I've worked on
+            Innovative live projects that solve real-world problems and
+            collaborated with talented people to create digital products for
+            both business and product use.
+          </p>
+
+          <hr class="horizontal-seperator" />
+
+          <button class="block__header-button">
+            DOWNLOAD RESUME
+            <!-- <i class="fas fa-download"></i> -->
+          </button>
+        </div>
+        <div class="block__contact">
+          <h4 class="color-white bold">Let's Work Together</h4>
+          <p>
+            I am Interested in freelancing and contract based projects -
+            especially ambitious and large projects. However, If you have any
+            other request and question, don’t hesitate to contact me uning below
+            form either.
+          </p>
+          <form id="contact__form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="color-white" for="inputEmail4">Name</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="color-white" for="inputPassword4">Email</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword4"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="color-white" for="inputAddress">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="form-group">
+              <label class="color-white" for="inputAddress2">Message</label>
+              <textarea class="form-control" id="message2" name="message2" required="" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
     </div>
 
+    <!-- <hr class="content-seperator"> -->
 
+    <footer>
+      <div class="footer__container">
+        <div class="block__links">
+          <ul>
+            <h5 class="color-primary bold">ADDRESS</h5>
+            <p class="color-white light">New Delhi</p>
+            <p class="color-white light">India</p>
+          </ul>
+          <ul>
+            <h5 class="color-primary bold">SERVICES</h5>
+            <p class="color-white light">Mobile App Development</p>
+            <p class="color-white light">Web Development</p>
+            <p class="color-white light">UI/UX Design</p>
+          </ul>
+          <ul>
+            <h5 class="color-primary bold">LINKS</h5>
+            <a href=""><p class="color-white light">Home</p></a>
+            <a href=""><p class="color-white light">Experience</p></a>
+            <a href=""><p class="color-white light">Projects</p></a>
+          </ul>
+          <ul>
+            <h5 class="color-primary bold">FOLLOW ME</h5>
+            <a href="https://github.com/rahulshah456"
+              ><p class="color-white light">Github</p></a
+            >
+            <a href="https://www.linkedin.com/in/rahul-kumar-shah-4b1b7b113/"
+              ><p class="color-white light">Linkedin</p></a
+            >
+            <a href="#"><p class="color-white light">Twitter</p></a>
+            <a href="#"><p class="color-white light">Dribble</p></a>
+          </ul>
+        </div>
+        <div class="block__copyright">
+          <img src="res/drawables/logo_dark.svg" />
+          <p>© 2020 Copyright: Rahul Kumar Shah</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
     <script src="./automation.js"></script>
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
-</body>
-
+  </body>
 </html>
