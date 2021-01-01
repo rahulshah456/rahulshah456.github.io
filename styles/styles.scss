@@ -191,10 +191,7 @@ body::-webkit-scrollbar-thumb {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.block__header-headline .highlight {
-  color: $primary-color;
-  font-weight: 300;
-}
+
 
 .block__header-info p {
   color: white;
@@ -463,7 +460,59 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
 }
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//===================================================================================
+
+
+//++++++++++++++++++++++++++++++++++++++ PROJECTS +++++++++++++++++++++++++++++++++++
+
+#projects {
+  height: fit-content;
+  margin-bottom: 8vmin;
+}
+
+.container_projects {
+  display: grid;
+  gap: 8vmin;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project__card {
+  height: 90vh;
+  border-radius: 1vmin;
+  position: relative;
+  transition: 250ms ease-in-out;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+
+  .project_card--info {
+    padding: 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .project__card-image {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 1vmin;
+    background-size: contain;
+    background: url(../res/images/mentorship_banner.png) no-repeat;
+  }
+}
+
+.project__card:hover {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -1vmin);
+}
+
+
+
+//===================================================================================
+
+
+
 
 //++++++++++++++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++++
 
@@ -867,6 +916,10 @@ h6 {
 
 .bg-primary {
   background-color: $primary-color;
+}
+
+.bg-primary-dark {
+  background-color: $primary-color-dark;
 }
 
 .bg-white {

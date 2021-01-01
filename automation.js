@@ -1,7 +1,7 @@
 var options = {
     strings: [
         'Hello World',
-        'I Turn <span class="highlight">Visions</span> Into Stunning Digital Experiences'
+        'I Turn <span class="color-primary light">Visions</span> Into Stunning Digital Experiences'
     ],
     typeSpeed: 50,
     startDelay: 250,
