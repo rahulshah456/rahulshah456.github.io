@@ -11306,15 +11306,16 @@ body::-webkit-scrollbar-thumb {
 .container_projects {
   display: -ms-grid;
   display: grid;
-  gap: 8vmin;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  gap: 4vmin;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
 }
 
 .project__card {
-  height: 90vh;
+  min-height: 70vmin;
   border-radius: 1vmin;
   position: relative;
+  overflow: hidden;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
@@ -11328,22 +11329,199 @@ body::-webkit-scrollbar-thumb {
   top: 0;
 }
 
-.project__card .project__card-image {
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 1vmin;
-  background-size: contain;
-  background: url(../res/images/mentorship_banner.png) no-repeat;
-}
-
 .project__card:hover {
   -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
           box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-  -webkit-transform: translate(0, -1vmin);
-          transform: translate(0, -1vmin);
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS */
+  .container_projects {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+#one {
+  background-color: #246bfe;
+}
+
+#one .project__card-image {
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  margin-top: 18%;
+  border-radius: 1vmin;
+  background-size: cover;
+  background: url(../res/drawables/thumb_smartsevak.svg) no-repeat;
+}
+
+#three {
+  background: -webkit-gradient(linear, left top, right top, from(#4BBFAA), to(#BBCD61));
+  background: linear-gradient(to right, #4BBFAA, #BBCD61);
+}
+
+#four {
+  background-color: #00A9FE;
+}
+
+#five {
+  background-color: #8C2165;
+}
+
+#five #project__card-image {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  left: 13.33%;
+  bottom: 2%;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+#five #project__card-image:hover {
+  width: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform: rotate(-23deg);
+  transform-origin: center;
+  -webkit-transform: rotate(-23deg);
+  -moz-transform: rotate(-23deg);
+  -ms-transform: rotate(-23deg);
+  -o-transform: rotate(-23deg);
+  bottom: 18%;
+  left: 0;
+}
+
+#two {
+  background-image: -webkit-gradient(linear, left top, right top, from(#FFB22A), to(#FF685E));
+  background-image: linear-gradient(to right, #FFB22A, #FF685E);
+  position: relative;
+}
+
+#two #project__card-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 18%;
+  bottom: 8%;
+}
+
+#six {
+  background: -webkit-gradient(linear, left top, right top, from(#5EAC24), to(#91DC5A));
+  background: linear-gradient(to right, #5EAC24, #91DC5A);
+  position: relative;
+}
+
+#six #project__card-image {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 25%;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  transform: rotate(23deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(23deg);
+  -moz-transform: rotate(23deg);
+  -ms-transform: rotate(23deg);
+  -o-transform: rotate(23deg);
+  bottom: -36%;
+}
+
+#six #project__card-image:hover {
+  height: 120%;
+  -webkit-transform: rotate(-23deg);
+          transform: rotate(-23deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate-(23deg);
+  -moz-transform: rotate(-23deg);
+  -ms-transform: rotate(-23deg);
+  -o-transform: rotate(-23deg);
+}
+
+#seven {
+  background-color: #004953;
+}
+
+#ten {
+  background-color: #30d5db;
+}
+
+#eight {
+  background-color: #F68633;
+}
+
+#nine {
+  background-color: #192B33;
 }
 
 footer {
