@@ -30,6 +30,7 @@ let resumeImage = $(".resume");
 
 var zoom = 0.4;
 var isZoomVisible = false;
+resumeImage.css('filter', 'grayscale(100%) blur(5px)')
 
 window.addEventListener('mousemove', e => {
 	cursor(e);
