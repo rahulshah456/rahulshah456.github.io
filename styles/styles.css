@@ -10825,6 +10825,7 @@ body {
   background-color: #1a1b1e;
   font-family: "Gilroy";
   font-size: calc(0.6vw + 0.6vh);
+  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10839,6 +10840,34 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #bbbbbb;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2vmin white solid;
+  z-index: 999;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-property: background , -webkit-transform;
+  transition-property: background , -webkit-transform;
+  transition-property: background , transform;
+  transition-property: background , transform , -webkit-transform;
+}
+
+.link-grow-large {
+  -webkit-transform: scale(5);
+          transform: scale(5);
+}
+
+.link-grow {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .content-seperator {
@@ -11024,11 +11053,34 @@ body::-webkit-scrollbar-thumb {
   background: #2955e5;
 }
 
-.block__phone img {
+.block__phone-mockup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.block__phone-mockup .mockup_frame {
   height: auto;
-  width: 60%;
+  width: 25.8vw;
   z-index: 1;
   pointer-events: none;
+}
+
+.block__phone-mockup .resume {
+  height: auto;
+  width: 24vw;
+  position: absolute;
+  top: 0.8vw;
+  left: 0.8vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 1024px) {
@@ -11045,6 +11097,12 @@ body::-webkit-scrollbar-thumb {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .block__phone #mockup {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background: white;
   }
 }
 
@@ -11536,7 +11594,6 @@ ul {
 }
 
 #navbar__desktop {
-  background-color: black;
   margin: 0;
   padding-left: 8vw;
   padding-top: 0;

@@ -68,6 +68,7 @@ body {
   background-color: $background--color;
   font-family: $font--primary;
   font-size: $font_size_small_x;
+  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -88,6 +89,29 @@ body::-webkit-scrollbar-thumb {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //++++++++++++++++++++++++++++ UNIVERSAL COMPONENTS +++++++++++++++++++++++++++++++++++++
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2vmin white solid;
+  z-index: 999;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background , transform;
+ 
+}
+
+.link-grow-large {
+  transform: scale(5);
+}
+
+.link-grow {
+  transform: scale(1.5);
+}
+
 
 .content-seperator {
   background-color: rgba(255, 255, 255, 0.199);
@@ -236,12 +260,34 @@ body::-webkit-scrollbar-thumb {
   //color: black;
 }
 
-.block__phone img {
-  height: auto;
-  width: 60%;
-  z-index: 1;
-  pointer-events: none;
+
+.block__phone-mockup {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .mockup_frame {
+    height: auto;
+    width: 25.8vw;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .resume {
+    height: auto;
+    width: 24vw;
+    //filter: blur(1.2vw);
+    //-webkit-filter: blur(1.2vw);
+    position: absolute;
+    top: 0.8vw;;
+    left: 0.8vw;
+    transition: all 0.5s ease-in-out;
+  }
+
 }
+
 
 // For Desktop Devices - 1024px to largest
 @media (min-width: 1024px) {
@@ -251,6 +297,14 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     //background: red;
+
+
+    #mockup {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      background: white;
+    }
   }
 }
 
@@ -712,7 +766,6 @@ ul {
 //++++++++++++++++++++++++++++++++++++++ NAVBAR - DESKTOP +++++++++++++++++++++++++++
 
 #navbar__desktop {
-  background-color: black;
   margin: 0;
   padding-left: 8vw;
   padding-top: 0;
