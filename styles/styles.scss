@@ -101,7 +101,6 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
   transition: all 0.3s ease;
   transition-property: background , transform;
- 
 }
 
 .link-grow-large {
@@ -465,60 +464,91 @@ body::-webkit-scrollbar-thumb {
   padding-left: calc(3vw + 3vh);
 }
 
-.exp__card {
-  width: 50%;
-  margin-bottom: 4vmin;
-  position: relative;
-  transition: 250ms ease-in-out;
-  border-left: 1vmin solid black;
-  border-radius: 0.5vmin;
-  -webkit-transition: opacity 0.5s linear;
-  -moz-transition: opacity 0.5s linear;
-  -o-transition: opacity 0.5s linear;
-  -ms-transition: opacity 0.5s linear;
-}
-
-.exp__card:hover,
-.exp__card:focus {
-  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-  border-left: 1vmin solid $primary-color;
-  //transform: translate(0, -1vmin);
-}
-
-.exp__card::before {
-  content: "";
-  display: block;
-  width: 1vmin;
-  height: 1vmin;
-  border-radius: 50%;
-  background-color: $primary-color;
-  border: 1vmin solid $primary-color;
-  position: absolute;
-  top: 15%;
-  left: calc(-3.5vw - 3.5vh);
-}
-
-.exp__card-header {
-  padding: 1vmin 2vmin;
-}
-
-.exp__card-body {
-  padding: 1vmin 2vmin;
-  display: none;
-  //width: min-content;
-  transition: 0.5s ease-in-out;
-  transition: 250ms ease-in-out;
-  -webkit-transition: opacity 0.5s linear;
-  -moz-transition: opacity 0.5s linear;
-  -o-transition: opacity 0.5s linear;
-  -ms-transition: opacity 0.5s linear;
-}
-
 .exp__card-footer {
   padding: 1vmin 2vmin;
   display: flex;
   flex-direction: row;
 }
+
+.exp__card-header {
+    padding: 1vmin 2vmin;
+}
+
+
+.exp-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 4vmin;
+  width: 44em;
+  max-width: 80%;
+  padding: 2em 0;
+  background: $background--color-light;
+  box-shadow: 0 0 6px 0 rgba(#202024, .12);
+  transition: all .35s ease;
+  
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    background:$primary-color;
+    height: 4px;
+  }
+  
+  &::before {
+    width: 0;
+    opacity: 0;
+    transition: opacity 0 ease, width 0 ease;
+    transition-delay: .5s;
+  }
+  
+  &::after {
+    width: 100%;
+    background: black;
+    transition: width .5s ease;
+  }
+  
+  .hover_content {
+    overflow: hidden;
+    max-height: 0;
+    transform: translateY(1em);
+    transition: all .55s ease;
+    
+    p {
+      padding: 1vmin 2vmin;
+      color: $font--color-light;
+      line-height: 1.4em;
+    }
+  }
+  
+  &:hover {
+    width: 44em;
+    box-shadow: 0 10px 20px 0 rgba(#202024, .12);
+    
+    &::before {
+      width: 100%;
+      opacity: 1;
+      transition: opacity .5s ease, width .5s ease;
+      transition-delay: 0;
+    }
+    
+    &::after {
+      width: 0;
+      opacity: 0;
+      transition: width 0 ease;
+    }
+    
+    .hover_content {
+      max-height: 10em;
+      transform: none;
+    }
+  }
+}
+
+
 
 //===================================================================================
 
@@ -553,10 +583,10 @@ body::-webkit-scrollbar-thumb {
     // top: 0;
   }
 
-  // img {
-  //   position:absolute; 
-  //   bottom:0
-  // }
+  img {
+    transition: all 0.3s ease-in-out;
+    transition-property: filter;
+  }
 }
 
 .project__card:hover {

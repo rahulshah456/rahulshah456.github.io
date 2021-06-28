@@ -11292,57 +11292,6 @@ body::-webkit-scrollbar-thumb {
   padding-left: calc(3vw + 3vh);
 }
 
-.exp__card {
-  width: 50%;
-  margin-bottom: 4vmin;
-  position: relative;
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
-  border-left: 1vmin solid black;
-  border-radius: 0.5vmin;
-  -webkit-transition: opacity 0.5s linear;
-  -moz-transition: opacity 0.5s linear;
-  -o-transition: opacity 0.5s linear;
-  -ms-transition: opacity 0.5s linear;
-}
-
-.exp__card:hover,
-.exp__card:focus {
-  -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-  border-left: 1vmin solid #246bfe;
-}
-
-.exp__card::before {
-  content: "";
-  display: block;
-  width: 1vmin;
-  height: 1vmin;
-  border-radius: 50%;
-  background-color: #246bfe;
-  border: 1vmin solid #246bfe;
-  position: absolute;
-  top: 15%;
-  left: calc(-3.5vw - 3.5vh);
-}
-
-.exp__card-header {
-  padding: 1vmin 2vmin;
-}
-
-.exp__card-body {
-  padding: 1vmin 2vmin;
-  display: none;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
-  -webkit-transition: opacity 0.5s linear;
-  -moz-transition: opacity 0.5s linear;
-  -o-transition: opacity 0.5s linear;
-  -ms-transition: opacity 0.5s linear;
-}
-
 .exp__card-footer {
   padding: 1vmin 2vmin;
   display: -webkit-box;
@@ -11352,6 +11301,103 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.exp__card-header {
+  padding: 1vmin 2vmin;
+}
+
+.exp-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin-bottom: 4vmin;
+  width: 44em;
+  max-width: 80%;
+  padding: 2em 0;
+  background: #2d2e32;
+  -webkit-box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
+          box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+
+.exp-card::before, .exp-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #246bfe;
+  height: 4px;
+}
+
+.exp-card::before {
+  width: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0 ease, width 0 ease;
+  transition: opacity 0 ease, width 0 ease;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.exp-card::after {
+  width: 100%;
+  background: black;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.exp-card .hover_content {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transform: translateY(1em);
+          transform: translateY(1em);
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.exp-card .hover_content p {
+  padding: 1vmin 2vmin;
+  color: #bbbbbb;
+  line-height: 1.4em;
+}
+
+.exp-card:hover {
+  width: 44em;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12);
+          box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12);
+}
+
+.exp-card:hover::before {
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease, width .5s ease;
+  transition: opacity .5s ease, width .5s ease;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.exp-card:hover::after {
+  width: 0;
+  opacity: 0;
+  -webkit-transition: width 0 ease;
+  transition: width 0 ease;
+}
+
+.exp-card:hover .hover_content {
+  max-height: 10em;
+  -webkit-transform: none;
+          transform: none;
 }
 
 #projects {
@@ -11391,6 +11437,15 @@ body::-webkit-scrollbar-thumb {
 
 .project__card .project_card--info {
   padding: 10% 10% 0% 10%;
+}
+
+.project__card img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
 }
 
 .project__card:hover {

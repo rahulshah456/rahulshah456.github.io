@@ -18,14 +18,19 @@ $(".nav__mobile .nav__link").on("click", function(){
 //$('skills_box').height($('skills_box').width());
 
 $('.exp__card').on('mouseenter', function(){
-	$(this).find('.exp__card-body').toggle();
+	$(this).find('.exp__card-body').show(300, function() {
+		console.log('show');
+	});
 }).on('mouseleave', function(){
-	$(this).find('.exp__card-body').toggle();
+	$(this).find('.exp__card-body').hide(300, function() {
+		console.log('hide');
+	});
 })
 
 let mouseCursor = $(".cursor");
 let navLinks = document.querySelectorAll(".nav-link");
 let resumeImage = $(".resume");
+let projectCards = document.querySelectorAll(".project__card");
 
 
 var zoom = 0.4;
@@ -51,6 +56,17 @@ navLinks.forEach( link => {
 	link.addEventListener('mouseover', () => {
 		mouseCursor.addClass("link-grow");
 		mouseCursor.css('background-color', 'black');
+	});
+});
+
+projectCards.forEach( cards => {
+	cards.addEventListener('mouseout', () => {
+		mouseCursor.removeClass("link-grow");
+		cards.getElementsByTagName('img')[0].style.filter = "blur(0px)";
+	});
+	cards.addEventListener('mouseover', () => {
+		mouseCursor.addClass("link-grow");
+		cards.getElementsByTagName('img')[0].style.filter = "blur(8px)";
 	});
 });
 
