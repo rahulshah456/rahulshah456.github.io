@@ -11133,7 +11133,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .exp__card-footer {
-  padding: 1vmin 2vmin;
+  padding: 2vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11144,7 +11144,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .exp__card-header {
-  padding: 1vmin 2vmin;
+  padding: 3vmin 2vmin;
 }
 
 .exp-card {
@@ -11163,7 +11163,6 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 4vmin;
   width: 44em;
   max-width: 80%;
-  padding: 2em 0;
   background: #2d2e32;
   -webkit-box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
           box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
@@ -11238,6 +11237,11 @@ body::-webkit-scrollbar-thumb {
   max-height: 10em;
   -webkit-transform: none;
           transform: none;
+}
+
+.exp__card-desc {
+  padding: 2vmin 2vmax;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #projects {
@@ -11415,7 +11419,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 footer {
-  padding: 4vh 8vw;
+  padding: 4vh 12vw;
   background-color: black;
 }
 
@@ -11653,7 +11657,7 @@ ul {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 8vmin;
+  padding: 11vmin;
 }
 
 .horizontal-seperator {

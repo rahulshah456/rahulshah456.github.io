@@ -161,6 +161,10 @@ body::-webkit-scrollbar-thumb {
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
+
+
 //++++++++++++++++++++++++++++++++++++++++++++HOME PAGE +++++++++++++++++++++++++++++++++++++
 
 #container_home {
@@ -340,13 +344,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .exp__card-footer {
-  padding: 1vmin 2vmin;
+  padding: 2vmin;
   display: flex;
   flex-direction: row;
 }
 
 .exp__card-header {
-    padding: 1vmin 2vmin;
+    padding: 3vmin 2vmin;
 }
 
 
@@ -359,7 +363,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 4vmin;
   width: 44em;
   max-width: 80%;
-  padding: 2em 0;
+  //padding: 2em 0;
   background: $background--color-light;
   box-shadow: 0 0 6px 0 rgba(#202024, .12);
   transition: all .35s ease;
@@ -421,6 +425,12 @@ body::-webkit-scrollbar-thumb {
       transform: none;
     }
   }
+}
+
+
+.exp__card-desc {
+  padding: 2vmin 2vmax;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -614,7 +624,7 @@ body::-webkit-scrollbar-thumb {
 //++++++++++++++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++++
 
 footer {
-  padding: 4vh 8vw;
+  padding: 4vh 12vw;
   background-color: black;
 }
 
@@ -686,7 +696,6 @@ ul {
   }
   .nav__desktop li {
     cursor: pointer;
-    //margin-bottom: -1px;
     width: 4vmax;
     height: 4vmax;
     line-height: 4vmax;
@@ -722,9 +731,8 @@ ul {
   .nav__desktop li:hover i {
     background:$primary-color;
   }
+
 }
-
-
 
 @media (max-width: 992px) {
   .nav__desktop {
@@ -833,7 +841,7 @@ ul {
   background-color: $background--color-light;
   border-radius: 1vmin;
   height: fit-content;
-  padding: 8vmin;
+  padding: 11vmin;
 }
 
 .horizontal-seperator {
@@ -908,6 +916,11 @@ ul {
 }
 
 //===============================================================================
+
+
+
+
+
 
 //+++++++++++++++++++++++++++++++ FONT WEIGHTS ++++++++++++++++++++++++++++++++++
 
