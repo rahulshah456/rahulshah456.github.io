@@ -10825,7 +10825,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-top: 8vmin;
   background-color: #1a1b1e;
   font-family: "Open Sans";
   font-size: calc(0.6vw + 0.6vh);
@@ -10923,22 +10922,8 @@ body::-webkit-scrollbar-thumb {
   z-index: -2;
 }
 
-#home {
+#container_home {
   height: 100vh;
-}
-
-.block__header {
-  position: absolute;
-  left: 25%;
-  top: 35%;
-}
-
-.block__header img {
-  height: calc(8vw + 8vh);
-}
-
-.block__phone {
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10948,11 +10933,26 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
-.block__phone img {
-  height: 40vmax;
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../res/drawables/mobile_frame_white.svg);
+  background-size: 40vmin;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.block__header img {
+  height: calc(8vw + 8vh);
 }
 
 #skills {

@@ -64,7 +64,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-top: $navbar_height;
   background-color: $background--color;
   font-family: $font--primary;
   font-size: $font_size_small_x;
@@ -164,34 +163,25 @@ body::-webkit-scrollbar-thumb {
 
 //++++++++++++++++++++++++++++++++++++++++++++HOME PAGE +++++++++++++++++++++++++++++++++++++
 
-
-#home {
+#container_home {
   height: 100vh;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.block__header {
-  position: absolute;
-  left: 25%;
-  top: 35%;
-  //background: orange;
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../res/drawables/mobile_frame_white.svg);
+  background-size: 40vmin;                      
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .block__header img {
   height: $font_size_header_xxx;
-}
-
-.block__phone {
-  z-index: -1;
-  //background: #00A9FE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  img {
-    height: 40vmax;
-  }
 }
 
 
