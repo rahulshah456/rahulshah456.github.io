@@ -15,7 +15,7 @@ $icon--color: #1a1b1e;
 $font--color: #ffffff;
 $font--color-light: #bbbbbb;
 $font--secondary: "JetBrainsMono";
-$font--primary: "Gilroy";
+$font--primary: "Open Sans";
 $transition--length: 0.8;
 
 
@@ -52,14 +52,14 @@ $font_size_huge_xxx: calc(3vw + 3vh);
 
 $font_size_header_x: calc(36vmin);
 $font_size_header_xx: calc(12vw + 12vh);
-$font_size_header_xxx: calc(10vw + 10vh);
+$font_size_header_xxx: calc(8vw + 8vh);
 
-// :root {
-// 	--primary-color: #1089ff;
-// 	--success-color: #71F9A8;
-// }
 
 //++++++++++++++++++++++ DEFAULT COMPONENTS +++++++++++++++++++++++++++
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -68,7 +68,6 @@ body {
   background-color: $background--color;
   font-family: $font--primary;
   font-size: $font_size_small_x;
-  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -86,31 +85,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
 
 //++++++++++++++++++++++++++++ UNIVERSAL COMPONENTS +++++++++++++++++++++++++++++++++++++
-
-.cursor {
-  width: 3rem;
-  height: 3rem;
-  border: 0.2vmin white solid;
-  z-index: 999;
-  position: absolute;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transition-property: background , transform;
-}
-
-.link-grow-large {
-  transform: scale(5);
-}
-
-.link-grow {
-  transform: scale(1.5);
-}
-
 
 .content-seperator {
   background-color: rgba(255, 255, 255, 0.199);
@@ -119,8 +99,8 @@ body::-webkit-scrollbar-thumb {
 .content__page {
   width: 100%;
   height: 100vmin;
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding-left: 12vw;
+  padding-right: 12vw;
   //padding-bottom: 4vw;
 }
 
@@ -184,139 +164,44 @@ body::-webkit-scrollbar-thumb {
 
 //++++++++++++++++++++++++++++++++++++++++++++HOME PAGE +++++++++++++++++++++++++++++++++++++
 
-#home {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: stretch;
-  align-content: center;
-  height: 90vh;
-}
 
-.container__home {
-  padding: 0;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  //background: pink;
+#home {
+  height: 100vh;
+  
 }
 
 .block__header {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 1;
-  //background: purple;
-  pointer-events: none;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  //background: orange;
 }
 
-
-
-.block__header-info p {
-  color: white;
-  font-weight: 300;
-  opacity: 0.5;
-  margin-top: 0.5rem;
-  font-size: $font_size_normal_xx;
+.block__header img {
+  height: $font_size_header_xxx;
 }
 
-.block__header-button {
-  margin-top: 1rem;
-  padding-left: $button_margin_h;
-  padding-right: $button_margin_h;
-  padding-top: $button_margin_v;
-  padding-bottom: $button_margin_v;
-  //font-size: $font_size_normal_xxx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 500;
-  color: white;
-  background: $primary-color;
-  border-radius: $border_radius;
-  border: none;
-  width: auto;
-  height: auto;
-  pointer-events: auto;
-  transition: 200ms ease-in-out;
-}
-
-.block__header-button:hover,
-.block__header-button:focus {
-  //box-shadow: 0 1vmin 4vmin $primary-color;
-  //box-shadow: 0 6px 32px $primary-color-dark;
-  background: $primary-color-dark;
-  //color: black;
-}
-
-
-.block__phone-mockup {
-
+.block__phone {
+  z-index: -1;
+  //background: #00A9FE;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
-  .mockup_frame {
-    height: auto;
-    width: 25.8vw;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .resume {
-    height: auto;
-    width: 24vw;
-    //filter: blur(1.2vw);
-    //-webkit-filter: blur(1.2vw);
-    position: absolute;
-    top: 0.8vw;;
-    left: 0.8vw;
-    transition: all 0.5s ease-in-out;
-  }
-
-}
-
-
-// For Desktop Devices - 1024px to largest
-@media (min-width: 1024px) {
-  .block__phone {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //background: red;
-
-
-    #mockup {
-      position: absolute;
-      top: 15px;
-      right: 30px;
-      background: white;
-    }
+  img {
+    height: 40vmax;
   }
 }
 
-//For Mobile Devices - Zero to 1024px
-@media (max-width: 1024px) {
-  .block__phone {
-    flex: 0;
-    display: none;
-    //background: #71F9A8;
-  }
-}
 
 //==================================================================================
+
+
+
+
+
+
 
 //++++++++++++++++++++++++++++++++++++ SKILLS +++++++++++++++++++++++++++++++++++++++
 
@@ -714,10 +599,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
-
-
-
 #seven {
   background-color: #004953;
 }
@@ -793,63 +674,79 @@ ul {
 
 //===================================================================================
 
+
+
+
+
+
+
+
 //++++++++++++++++++++++++++++++++++++++ NAVBAR - DESKTOP +++++++++++++++++++++++++++
 
-#navbar__desktop {
-  margin: 0;
-  padding-left: 8vw;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 8vw;
-  font-weight: 500;
-}
-
-.nav-item {
-  padding-left: 2vw;
-  text-transform: uppercase;
-}
-
-#navbar__desktop .navbar-nav > li > a {
-  color: white;
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
-}
-
-#navbar__desktop .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus {
-  filter: grayscale(0%) opacity(1);
-}
-
-#navbar__desktop .navbar-nav .nav-link.disabled {
-  color: gray;
-}
-
-#navbar__desktop .navbar-nav .show > .nav-link,
-#navbar__desktop .navbar-nav .active > .nav-link,
-#navbar__desktop .navbar-nav .nav-link.show,
-#navbar__desktop .navbar-nav .nav-link.active {
-  filter: grayscale(0%) opacity(1);
-  color: white;
-}
-
-.navbar-brand {
-  padding-top: 2.5vh;
-  padding-bottom: 2.5vh;
-}
-
-@media (max-width: 992px) {
-  .navbar-brand {
-    font-size: $font_size_medium_xxx;
+@media (min-width: 992px) {
+  .nav__desktop {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background:$background--color-light;
+    display: inline-block;
+    height: auto;
+    position: fixed;
+    top: 25%;
+  }
+  .nav__desktop li {
+    cursor: pointer;
+    //margin-bottom: -1px;
+    width: 4vmax;
+    height: 4vmax;
+    line-height: 4vmax;
+    font-size: $font_size_small_x;
+    color: white;
+  }
+  .nav__desktop li div,
+  .nav__desktop li i {
+    position: absolute;
+    text-align: center;
+    animation-duration: 300ms;
+  }
+  .nav__desktop li div {
+    margin-left: 4vmax;
+    text-align: center;
+    width: 7vmax;
+  }
+  .nav__desktop li i {
+    line-height: 4vmax;
+    width: 4vmax;
+    z-index: 9;
+    background: $background--color-light;
+  }
+  .nav__desktop li div {
+    display: none;
+    z-index: 1;
+    background:$primary-color;
+  }
+  
+  .nav__desktop li:hover > div {
+    display: inline-block;
+  }
+  .nav__desktop li:hover i {
+    background:$primary-color;
   }
 }
 
-@media (min-width: 992px) {
-  .navbar-brand {
-    font-size: $font_size_normal_xx;
+
+
+@media (max-width: 992px) {
+  .nav__desktop {
+    display: none;
   }
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
 
 //++++++++++++++++++++++++++++++++++ NAVBAR MOBILE +++++++++++++++++++++++++++++++++++
 
@@ -908,6 +805,11 @@ ul {
 }
 
 //===============================================================================
+
+
+
+
+
 
 //+++++++++++++++++++++++++++++++ ABOUT PAGE ++++++++++++++++++++++++++++++++++++
 
@@ -1081,7 +983,7 @@ h1 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: $font_size_huge_x;
+  font-size: $font_size_header_x;
 }
 
 h2 {
