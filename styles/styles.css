@@ -10855,6 +10855,16 @@ p {
   margin: 0;
 }
 
+input[type="text"], input[type="email"] {
+  border-radius: 0.5vmin;
+  padding: 2.5vmin 2vmin;
+}
+
+textarea[name="message"] {
+  border-radius: 0.5vmin;
+  padding: 2.5vmin 2vmin;
+}
+
 .content-seperator {
   background-color: rgba(255, 255, 255, 0.199);
 }
@@ -10929,7 +10939,7 @@ p {
           align-items: center;
   color: white;
   margin-left: 0.5vmin;
-  font-size: calc(1.2vw + 1.2vh);
+  font-size: calc(1.3vw + 1.3vh);
   z-index: 0;
 }
 
@@ -10975,6 +10985,38 @@ p {
 
 .block__header img {
   height: calc(8vw + 8vh);
+}
+
+.normal-button {
+  margin-top: 1rem;
+  padding-left: 2.4vmax;
+  padding-right: 2.4vmax;
+  padding-top: 1.8vmin;
+  padding-bottom: 1.8vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background: #246bfe;
+  border-radius: 0.8vmin;
+  border: none;
+  width: auto;
+  height: auto;
+  pointer-events: auto;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.normal-button:hover,
+.normal-button:focus {
+  background: #2955e5;
 }
 
 #skills {
@@ -11140,7 +11182,7 @@ p {
 
 .accordion {
   width: 100%;
-  max-width: 768px;
+  max-width: 100vmin;
   border-left: 0.5vmin solid white;
   padding-left: calc(3vw + 3vh);
 }
@@ -11203,7 +11245,7 @@ p {
 
 @media (max-width: 425px) {
   .accordion-item-body-desc li {
-    font-size: calc(1vw + 1vh);
+    font-size: calc(1.15vw + 1.15vh);
   }
 }
 
@@ -11720,13 +11762,25 @@ footer {
 }
 
 @media (max-width: 425px) {
-  p {
-    font-size: calc(1vw + 1vh);
+  p, label {
+    font-size: calc(1.15vw + 1.15vh);
+  }
+  input[type="text"], input[type="email"] {
+    font-size: calc(1.15vw + 1.15vh);
+  }
+  textarea[name="message"] {
+    font-size: calc(1.15vw + 1.15vh);
   }
 }
 
 @media (min-width: 425px) {
-  p {
+  p, label {
+    font-size: calc(0.6vw + 0.6vh);
+  }
+  input[type="text"], input[type="email"] {
+    font-size: calc(0.6vw + 0.6vh);
+  }
+  textarea[name="message"] {
     font-size: calc(0.6vw + 0.6vh);
   }
 }
@@ -11763,7 +11817,7 @@ h5 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: calc(1.2vw + 1.2vh);
+  font-size: calc(1.3vw + 1.3vh);
 }
 
 h6 {

@@ -51,3 +51,16 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
+
+
+
+let projectCards = document.querySelectorAll(".project__card");
+
+projectCards.forEach( cards => {
+	cards.addEventListener('mouseout', () => {
+		cards.getElementsByTagName('img')[0].style.filter = "blur(0px)";
+	});
+	cards.addEventListener('mouseover', () => {
+		cards.getElementsByTagName('img')[0].style.filter = "blur(8px)";
+	});
+});
