@@ -54,15 +54,13 @@ $font_size_large_x: calc(2.6vw + 2.6vh);
 $font_size_large_xx: calc(2.2vw + 2.2vh);
 $font_size_large_xxx: calc(2vw + 2vh);
 
-$font_size_huge_x: calc(4vw + 4vh);
+$font_size_huge_x: calc(5vw + 5vh);
 $font_size_huge_xx: calc(3.5vw + 3.5vh);
 $font_size_huge_xxx: calc(3vw + 3vh);
 
-$font_size_header_x: calc(36vmin);
-$font_size_header_xx: calc(12vw + 12vh);
-$font_size_header_xxx: calc(8vw + 8vh);
-
-
+$font_size_header_x: calc(10vw + 10vh);
+$font_size_header_xx: calc(8vw + 8vh);
+$font_size_header_xxx: calc(6vw + 6vh);
 
 
 //=====================================================================================//
@@ -85,7 +83,7 @@ body {
   padding: 0;
   background-color: $background--color;
   font-family: $font--primary, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: $font_size_small_x;
+  //font-size: $font_size_small_x;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -122,6 +120,9 @@ textarea[name="message"] {
   border-radius: 0.5vmin;
   padding: 2.5vmin 2vmin;
 }
+
+
+
 
 //----------------------------------------------------------------------------------// 
 
@@ -250,8 +251,16 @@ textarea[name="message"] {
   background-position: center center;
 }
 
-.block__header img {
-  height: $font_size_header_xxx;
+@media (max-width: $media-query-max-width-tablet) {
+  .block__header img {
+    width: 85vmin;
+  }
+}
+
+@media (min-width: $media-query-max-width-tablet) {
+  .block__header img {
+    width: 95vmin;
+  }
 }
 
 .normal-button {
@@ -260,7 +269,7 @@ textarea[name="message"] {
   padding-right: $button_margin_h;
   padding-top: $button_margin_v;
   padding-bottom: $button_margin_v;
-  //font-size: $font_size_normal_xxx;
+  font-size: $font_size_normal_xxx;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -328,11 +337,10 @@ textarea[name="message"] {
 
 .skills_box_rect {
   height: fit-content;
-  padding-top: 1vmin;
-  padding-bottom: 1vmin;
+  padding: 1vmin 2vmin;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .box-logo img {
@@ -446,11 +454,11 @@ textarea[name="message"] {
   width: 100%;
   max-width: 100vmin;
   border-left: 0.5vmin solid white;
-  padding-left: calc(3vw + 3vh);
+  padding-left: calc(1.5vw + 1.5vh);
 }
 
 .accordion-item {
-  margin-bottom: 4vmin;
+  margin-bottom: 6vmin;
   background: $background--color-light;
   box-shadow: 0 0 6px 0 rgba(#202024, .12);
   transition: all .35s ease;
@@ -464,7 +472,7 @@ textarea[name="message"] {
   position: absolute;
   width: calc(0.8vw + 0.8vh);
   height: calc(0.8vw + 0.8vh);
-  left: calc(-3.5vw - 3.5vh);
+  left: calc(-2vw - 2vh);
   background-color: white;
   border: 0.5vmin solid $font--color-light;
   top: 15px;
@@ -478,7 +486,7 @@ textarea[name="message"] {
 .accordion-item:focus {
   box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   border-top: 1vmin solid $primary-color;
-  transform: translate(0, -1vmin);
+  //transform: translate(0, -1vmin);
 }
 
 .accordion-item-header {
@@ -498,18 +506,6 @@ textarea[name="message"] {
 .accordion-item-body-desc {
   color: rgba(255, 255, 255, 0.5);
   padding: 2vmin 2vmax;
-}
-
-@media (max-width: $media-query-max-width-mobile) {
-  .accordion-item-body-desc li  {
-    font-size: $font_size_normal_xx;
-  }
-}
-
-@media (min-width: $media-query-max-width-mobile) {
-  .accordion-item-body-desc li  {
-    font-size: $font_size_small_x;
-  }
 }
 
 .accordion-item-footer {
@@ -746,8 +742,9 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8vmin;
+  justify-content: flex-start and space-between;
+  column-gap: 14vw;
+  row-gap: 8vmin;
 }
 
 .block__copyright {
@@ -878,7 +875,7 @@ footer {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     background-color: $primary-color;
     display: flex;
-    z-index: 1;
+    z-index: 2;
     overflow-x: auto;
   }
 
@@ -1063,48 +1060,59 @@ footer {
 // 
 //===================================================================================//
 
-@media (max-width: $media-query-max-width-mobile) {
-  p,label {
-    font-size: $font_size_normal_xx;
-  }
+@media (max-width: $media-query-max-width-laptop) {
 
+  p,label {
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
+  }
+  
   input[type="text"],input[type="email"] {
-    font-size: $font_size_normal_xx;
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
   
   textarea[name="message"] {
-    font-size: $font_size_normal_xx;
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
+  
+  li  {
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
+  }
+
 }
 
-@media (min-width: $media-query-max-width-mobile) {
-  p,label {
-    font-size: $font_size_small_x;
-  }
 
+@media (min-width: $media-query-max-width-laptop) {
+
+  p,label {
+    font-size: clamp(13px, $font_size_small_x, 64px);
+  }
+  
   input[type="text"],input[type="email"] {
-    font-size: $font_size_small_x;
+    font-size: clamp(13px, $font_size_small_x, 64px);
   }
   
   textarea[name="message"] {
-    font-size: $font_size_small_x;
+    font-size: clamp(13px, $font_size_small_x, 64px);
   }
+  
+  li  {
+    font-size: clamp(13px, $font_size_small_x, 64px);
+  }
+
 }
-
-
 
 h1 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: $font_size_header_x;
+  font-size: $font_size_header_xxx;
 }
 
 h2 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: $font_size_huge_xxx;
+  font-size: $font_size_huge_xx;
 }
 
 h3 {
@@ -1118,14 +1126,14 @@ h4 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: $font_size_medium_xx;
+  font-size: $font_size_medium_x;
 }
 
 h5 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: $font_size_normal_x;
+  font-size: $font_size_normal_xx;
 }
 
 h6 {

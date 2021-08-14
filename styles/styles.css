@@ -10827,7 +10827,6 @@ body {
   padding: 0;
   background-color: #1a1b1e;
   font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: calc(0.6vw + 0.6vh);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10924,7 +10923,7 @@ textarea[name="message"] {
           align-items: center;
   z-index: -2;
   color: black;
-  font-size: calc(4vw + 4vh);
+  font-size: calc(5vw + 5vh);
   font-weight: 800;
 }
 
@@ -10983,8 +10982,16 @@ textarea[name="message"] {
   background-position: center center;
 }
 
-.block__header img {
-  height: calc(8vw + 8vh);
+@media (max-width: 768px) {
+  .block__header img {
+    width: 85vmin;
+  }
+}
+
+@media (min-width: 768px) {
+  .block__header img {
+    width: 95vmin;
+  }
 }
 
 .normal-button {
@@ -10993,6 +11000,7 @@ textarea[name="message"] {
   padding-right: 2.4vmax;
   padding-top: 1.8vmin;
   padding-bottom: 1.8vmin;
+  font-size: calc(0.8vw + 0.8vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11062,17 +11070,16 @@ textarea[name="message"] {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-top: 1vmin;
-  padding-bottom: 1vmin;
+  padding: 1vmin 2vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .box-logo img {
@@ -11184,11 +11191,11 @@ textarea[name="message"] {
   width: 100%;
   max-width: 100vmin;
   border-left: 0.5vmin solid white;
-  padding-left: calc(3vw + 3vh);
+  padding-left: calc(1.5vw + 1.5vh);
 }
 
 .accordion-item {
-  margin-bottom: 4vmin;
+  margin-bottom: 6vmin;
   background: #2d2e32;
   -webkit-box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
           box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
@@ -11204,7 +11211,7 @@ textarea[name="message"] {
   position: absolute;
   width: calc(0.8vw + 0.8vh);
   height: calc(0.8vw + 0.8vh);
-  left: calc(-3.5vw - 3.5vh);
+  left: calc(-2vw - 2vh);
   background-color: white;
   border: 0.5vmin solid #bbbbbb;
   top: 15px;
@@ -11217,8 +11224,6 @@ textarea[name="message"] {
   -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
           box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   border-top: 1vmin solid #246bfe;
-  -webkit-transform: translate(0, -1vmin);
-          transform: translate(0, -1vmin);
 }
 
 .accordion-item-header {
@@ -11241,18 +11246,6 @@ textarea[name="message"] {
 .accordion-item-body-desc {
   color: rgba(255, 255, 255, 0.5);
   padding: 2vmin 2vmax;
-}
-
-@media (max-width: 425px) {
-  .accordion-item-body-desc li {
-    font-size: calc(1.15vw + 1.15vh);
-  }
-}
-
-@media (min-width: 425px) {
-  .accordion-item-body-desc li {
-    font-size: calc(0.6vw + 0.6vh);
-  }
 }
 
 .accordion-item-footer {
@@ -11466,10 +11459,12 @@ footer {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 8vmin;
+  -webkit-box-pack: flex-start and space-between;
+      -ms-flex-pack: flex-start and space-between;
+          justify-content: flex-start and space-between;
+  -webkit-column-gap: 14vw;
+          column-gap: 14vw;
+  row-gap: 8vmin;
 }
 
 .block__copyright {
@@ -11587,7 +11582,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 1;
+    z-index: 2;
     overflow-x: auto;
   }
   .nav__link {
@@ -11761,27 +11756,33 @@ footer {
   margin-top: 4vmin;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
   p, label {
-    font-size: calc(1.15vw + 1.15vh);
+    font-size: clamp(13px, calc(1.15vw + 1.15vh), 32px);
   }
   input[type="text"], input[type="email"] {
-    font-size: calc(1.15vw + 1.15vh);
+    font-size: clamp(13px, calc(1.15vw + 1.15vh), 32px);
   }
   textarea[name="message"] {
-    font-size: calc(1.15vw + 1.15vh);
+    font-size: clamp(13px, calc(1.15vw + 1.15vh), 32px);
+  }
+  li {
+    font-size: clamp(13px, calc(1.15vw + 1.15vh), 32px);
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 1024px) {
   p, label {
-    font-size: calc(0.6vw + 0.6vh);
+    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
   }
   input[type="text"], input[type="email"] {
-    font-size: calc(0.6vw + 0.6vh);
+    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
   }
   textarea[name="message"] {
-    font-size: calc(0.6vw + 0.6vh);
+    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+  }
+  li {
+    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
   }
 }
 
@@ -11789,14 +11790,14 @@ h1 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: calc(36vmin);
+  font-size: calc(6vw + 6vh);
 }
 
 h2 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: calc(3vw + 3vh);
+  font-size: calc(3.5vw + 3.5vh);
 }
 
 h3 {
@@ -11810,14 +11811,14 @@ h4 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: calc(1.6vw + 1.6vh);
+  font-size: calc(1.8vw + 1.8vh);
 }
 
 h5 {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: calc(1.3vw + 1.3vh);
+  font-size: calc(1.15vw + 1.15vh);
 }
 
 h6 {
