@@ -29,6 +29,9 @@ $media-query-max-width-laptop: 1024px;
 $pika_games-color: linear-gradient(to right,#FFB22A, #FF685E);
 $eklavya_study-color: linear-gradient(to right,#4BBFAA, #BBCD61);
 $pika_browser-color: linear-gradient(to right,#5EAC24,#91DC5A);
+$window-app-color: linear-gradient(to right,#4776E6,#8E54E9);
+$folio-web-color: linear-gradient(to right,#414345,#232526);
+$liveslider-color: linear-gradient(to right,#00bf8f,#232526);
 
 
 //widgets responsive sizes
@@ -691,11 +694,11 @@ textarea[name="message"] {
 
 
 #seven {
-  background-color: #004953;
+  background: $window-app-color;
 }
 
 #ten {
-  background-color: rgb(48, 213, 219);
+  background: $liveslider-color;
 }
 
 #eight {
@@ -703,7 +706,7 @@ textarea[name="message"] {
 }
 
 #nine {
-  background-color: #192B33;
+  background: $folio-web-color;
 }
 
 //----------------------------------------------------------------------------------// 

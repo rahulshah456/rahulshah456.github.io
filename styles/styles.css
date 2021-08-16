@@ -11418,11 +11418,13 @@ textarea[name="message"] {
 }
 
 #seven {
-  background-color: #004953;
+  background: -webkit-gradient(linear, left top, right top, from(#4776E6), to(#8E54E9));
+  background: linear-gradient(to right, #4776E6, #8E54E9);
 }
 
 #ten {
-  background-color: #30d5db;
+  background: -webkit-gradient(linear, left top, right top, from(#00bf8f), to(#232526));
+  background: linear-gradient(to right, #00bf8f, #232526);
 }
 
 #eight {
@@ -11430,7 +11432,8 @@ textarea[name="message"] {
 }
 
 #nine {
-  background-color: #192B33;
+  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 footer {
