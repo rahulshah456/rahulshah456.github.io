@@ -57,10 +57,22 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 let projectCards = document.querySelectorAll(".project__card");
 
 projectCards.forEach( cards => {
-	cards.addEventListener('mouseout', () => {
+	cards.addEventListener('mouseleave', () => {
+    console.log("mouseleave");
 		cards.getElementsByTagName('img')[0].style.filter = "blur(0px)";
+    cards.getElementsByClassName('project_card--info')[0].style.width = "0%";
+    if(cards.getElementsByClassName('project_card--desc')[0].style.display != "none") {
+      cards.getElementsByClassName('project_card--desc')[0].style.display = "none";
+    }
 	});
-	cards.addEventListener('mouseover', () => {
+	cards.addEventListener('mouseenter', () => {
+    console.log("mouseenter");
 		cards.getElementsByTagName('img')[0].style.filter = "blur(8px)";
+    cards.getElementsByClassName('project_card--info')[0].style.width = "90%";
+    setTimeout(function() {
+      if(cards.getElementsByClassName('project_card--desc')[0].style.display != "flex") {
+        cards.getElementsByClassName('project_card--desc')[0].style.display = "flex";
+      }
+    },300);
 	});
 });

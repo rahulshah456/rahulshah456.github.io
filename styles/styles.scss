@@ -85,7 +85,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background--color;
-  font-family: $font--primary, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $font--primary;
   //font-size: $font_size_small_x;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -222,6 +222,41 @@ textarea[name="message"] {
   }
 }
 
+
+.normal-button {
+  margin-top: 1vmax;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  background: $primary-color;
+  border-radius: $border_radius;
+  border: none;
+  width: auto;
+  height: min-content;
+  border-radius: 1vmin;
+  pointer-events: auto;
+  transition: 200ms ease-in-out;
+}
+
+.normal-button:hover,
+.normal-button:focus {
+  background: $primary-color-dark;
+}
+
+@media (min-width: $media-query-max-width-tablet) {
+  .normal-button {
+    padding: 2vmin 4vmin;
+  }
+}
+
+@media (max-width: $media-query-max-width-tablet) {
+  .normal-button {
+    padding: 2vmin 4vmin;
+  }
+}
+
+
 //----------------------------------------------------------------------------------// 
 
 
@@ -264,31 +299,6 @@ textarea[name="message"] {
   .block__header img {
     width: 95vmin;
   }
-}
-
-.normal-button {
-  margin-top: 1rem;
-  padding-left: $button_margin_h;
-  padding-right: $button_margin_h;
-  padding-top: $button_margin_v;
-  padding-bottom: $button_margin_v;
-  font-size: $font_size_normal_xxx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: white;
-  background: $primary-color;
-  border-radius: $border_radius;
-  border: none;
-  width: auto;
-  height: auto;
-  pointer-events: auto;
-  transition: 200ms ease-in-out;
-}
-
-.normal-button:hover,
-.normal-button:focus {
-  background: $primary-color-dark;
 }
 
 //----------------------------------------------------------------------------------// 
@@ -552,14 +562,11 @@ textarea[name="message"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: 250ms ease-in-out;
+  transition: 250ms ease-in;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
 
-  .project_card--info {
+  .project_card--header {
     padding: 10% 10% 0% 10%;
-    // position: absolute;
-    // left: 0;
-    // top: 0;
   }
 
   img {
@@ -572,6 +579,90 @@ textarea[name="message"] {
   box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   //transform: translate(0, -1vmin);
 }
+
+// .project__card-image:hover + .project_card--info{
+//   width: 90%;
+// }
+
+
+.project_card--info {
+  width: 0%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  left: 0;
+  top: 30%;
+  float: left;
+  border-radius: 0 1vmin 1vmin 0;
+  //position: relative;
+  overflow: hidden;
+  //display: none;
+  transition: width 250ms;
+}
+
+.project_card--desc {
+  padding: 5% 5% 5% 10%;
+  display: none;
+  flex-direction: column;
+
+  .badge {
+    margin-top: 1vmin;
+    margin-right: 1vmin;
+  }
+
+  .normal-button {
+    width: 70%;
+  }
+
+  a img{
+    //padding-top: 2vmin;
+    margin-top: 1vmax;
+    width: auto;
+    border-radius: 1vmin;
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 0.5vmin 0.5vmin rgba(0, 0, 0, 0.16);
+  }
+
+  a img:hover {
+    box-shadow: 0 1vmin 1vmin rgba(0, 0, 0, 0.16);
+  }
+}
+
+.desc-seperator {
+  width: 100%;
+  height: 0.15vmin;
+  margin-top: 1vmax;
+  //margin-bottom: 1vmax;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media (min-width: $media-query-max-width-tablet) {
+  .badge {
+    padding: 1vmin 2vmin;
+  }
+
+  .project_card--desc a img {
+    height: 3vmax;
+  }
+
+}
+
+@media (max-width: $media-query-max-width-tablet) {
+  .badge {
+    padding: 2vmin 4vmin;
+  }
+
+  .project_card--desc a img {
+    height: 5vmax;
+  }
+}
+
+
+
+// .project_card--info:hover {
+//   width: 90%;
+// }
 
 
 
@@ -1081,6 +1172,12 @@ footer {
     font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
 
+  .normal-button {
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
+  }
+
+
+
 }
 
 
@@ -1102,6 +1199,14 @@ footer {
     font-size: clamp(13px, $font_size_small_x, 64px);
   }
 
+  .normal-button {
+    font-size: clamp(13px, $font_size_small_x, 64px);
+  }
+
+}
+
+.badge {
+  font-size: clamp(11px, $font_size_small_x, 64px);
 }
 
 h1 {
