@@ -1,15 +1,20 @@
-**Describe the feature you'd like :** <br>
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
 
-<!-- A clear and concise description of what you want to happen.-->
+---
 
-**Additional context :** <br>
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-<!-- Add any other context about the problem here.-->
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-**Screenshots :** <br>
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-<!--Where-ever possible add a screenshot of the issue.-->
-
-**Would you like to work on the issue?** <br>
-
-<!--Let us know if this issue should be assigned to you or tell us who you think could help to solve this issue.-->
+**Additional context**
+Add any other context or screenshots about the feature request here.
