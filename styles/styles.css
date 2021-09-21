@@ -11276,6 +11276,39 @@ textarea[name="message"] {
   margin-bottom: 8vmin;
 }
 
+.container_project-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 1vmax;
+  padding-bottom: 1vmax;
+}
+
+.block_card-thumbnail {
+  height: 60vmin;
+  width: 45%;
+  background-color: #246bfe;
+  border-radius: 1vmin;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block_card-thumbnail img {
+  width: auto;
+  height: 100%;
+}
+
+.block__card-info {
+  height: 60vmin;
+  width: 55%;
+  padding: 2vmax;
+}
+
 .container_projects {
   display: -ms-grid;
   display: grid;

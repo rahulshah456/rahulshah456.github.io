@@ -549,6 +549,36 @@ textarea[name="message"] {
   margin-bottom: 8vmin;
 }
 
+
+.container_project-block {
+  display: flex;
+  //width: 100vw;
+  flex-direction: row;
+  padding-top: 1vmax;
+  padding-bottom: 1vmax;
+}
+
+.block_card-thumbnail {
+  height: 60vmin;
+  width: 45%;
+  background-color: $primary-color;
+  border-radius: 1vmin;
+  justify-content: center;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.block__card-info {
+  height: 60vmin;
+  width: 55%;
+  padding: 2vmax;
+  //background-color: orange;
+}
+
+
 .container_projects {
   display: grid;
   gap: 4vmin;
@@ -799,6 +829,9 @@ textarea[name="message"] {
 #nine {
   background: $folio-web-color;
 }
+
+
+
 
 //----------------------------------------------------------------------------------// 
 
