@@ -10854,14 +10854,25 @@ p {
   margin: 0;
 }
 
-input[type="text"], input[type="email"] {
-  border-radius: 0.5vmin;
+input[type], textarea[name] {
   padding: 2.5vmin 2vmin;
+  background-color: #1a1b1e;
+  border-width: 0.3vmin;
+  border-color: #1a1b1e;
+  color: #bbbbbb;
+  border-radius: 0.8vmin;
+  -webkit-transition: background-color 250ms ease-out;
+  transition: background-color 250ms ease-out;
 }
 
-textarea[name="message"] {
-  border-radius: 0.5vmin;
-  padding: 2.5vmin 2vmin;
+input[type]:focus, textarea[name]:focus, textarea[name]:valid {
+  background-color: #bbbbbb;
+  border-color: #246bfe;
+  color: black;
+}
+
+input[type]:valid, textarea[name]:valid {
+  border-color: #00bf8f;
 }
 
 .content-seperator {
@@ -11365,6 +11376,24 @@ textarea[name="message"] {
   -webkit-transform: translateX(-100%);
   animation: slide-out 300ms forwards;
   -webkit-animation: slide-out 300ms forwards;
+}
+
+#one {
+  background: rgba(47, 128, 237, 0.5);
+}
+
+#two {
+  background: -webkit-gradient(linear, left top, right top, from(#FFB22A), to(#FF685E));
+  background: linear-gradient(to right, #FFB22A, #FF685E);
+}
+
+#three {
+  background: -webkit-gradient(linear, left top, right top, from(#4BBFAA), to(#BBCD61));
+  background: linear-gradient(to right, #4BBFAA, #BBCD61);
+}
+
+#four {
+  background: rgba(101, 189, 203, 0.5);
 }
 
 .project_container_desc {

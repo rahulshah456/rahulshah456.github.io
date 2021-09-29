@@ -115,15 +115,50 @@ p {
   margin: 0;
 }
 
-input[type="text"],input[type="email"] {
-  border-radius: 0.5vmin;
+input[type], textarea[name] {
   padding: 2.5vmin 2vmin;
+  background-color: $background--color;
+  border-width: 0.3vmin;
+  border-color: $background--color;
+  color: $font--color-light;
+  border-radius: 0.8vmin;
+  transition: background-color 250ms ease-out;
 }
 
-textarea[name="message"] {
-  border-radius: 0.5vmin;
-  padding: 2.5vmin 2vmin;
+input[type]:focus, textarea[name]:focus, textarea[name]:valid {
+  background-color: $font--color-light;
+  border-color: $primary-color;
+  color: black;
 }
+
+input[type]:valid, textarea[name]:valid {
+  border-color: #00bf8f;
+}
+
+
+
+// textarea[name="message"],input[type] {
+//   background-color: $background--color;
+//   border: 0.2vmin solid $background--color-light;
+//   border-radius: 0.8vmin;
+// }
+
+// textarea[name="message"]:focus,textarea[name="message"]:valid, input[type]:valid,input[type]:focus {
+//   border: 0.2vmin solid $primary-color;
+//   background-color: $font--color-light;
+// }
+
+// textarea[name="message"]:invalid, input[type]:invalid {
+//   background-color: $font--color-light;
+// }
+
+
+// input {
+//   padding: 0.25em 0.5em;
+//   background-color: #fff;
+//   border: 2px solid var(--input-border);
+//   border-radius: 4px;
+// }
 
 
 //----------------------------------------------------------------------------------// 
@@ -562,6 +597,8 @@ textarea[name="message"] {
 }
 
 
+
+
 .project_container_img {
   width: 100%;
   height: 60vmin;
@@ -616,6 +653,25 @@ textarea[name="message"] {
   }
 
 }
+
+#one {
+  background: rgba(#2F80ED, .5);
+
+}
+
+#two {
+  background: $pika_games-color;
+}
+
+#three {
+  background: $eklavya_study-color;
+}
+
+#four {
+  background: rgba(#65BDCB, .5);
+}
+
+
 
 .project_container_desc {
   width: 100%;
