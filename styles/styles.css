@@ -10967,13 +10967,12 @@ textarea[name="message"] {
           align-items: center;
   color: white;
   background: #246bfe;
-  border-radius: 0.8vmin;
+  border-radius: 1vmin;
   border: none;
   width: auto;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  border-radius: 1vmin;
   pointer-events: auto;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
@@ -11048,7 +11047,7 @@ textarea[name="message"] {
   min-height: -moz-fit-content;
   min-height: fit-content;
   background: #2d2e32;
-  border-radius: 0.5vmin;
+  border-radius: 1vmin;
   border-top: 1vmin solid black;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
@@ -11073,6 +11072,7 @@ textarea[name="message"] {
 .skills_box {
   height: 0;
   padding-bottom: 100%;
+  border-radius: 0.5vmin;
 }
 
 .skills_box_rect {
@@ -11089,6 +11089,7 @@ textarea[name="message"] {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  border-radius: 0.5vmin;
 }
 
 .box-logo img {
@@ -11211,7 +11212,7 @@ textarea[name="message"] {
   -webkit-transition: all .35s ease;
   transition: all .35s ease;
   position: relative;
-  border-radius: 0.5vmin;
+  border-radius: 1vmin;
   border-top: 1vmin solid black;
 }
 
@@ -11266,6 +11267,7 @@ textarea[name="message"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-radius: 0 0 1vmin 1vmin;
 }
 
 #projects {
@@ -11277,23 +11279,21 @@ textarea[name="message"] {
 
 .project {
   width: 100%;
-  height: 60vmin;
+  height: auto;
   background-color: #2d2e32;
   border-radius: 1vmin;
   margin-bottom: 3vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   overflow: hidden;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
 }
 
 .project_container_img {
-  width: 55%;
-  height: 100%;
+  width: 100%;
+  height: 60vmin;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11306,9 +11306,70 @@ textarea[name="message"] {
           align-items: center;
 }
 
-.project_container_desc {
-  width: 45%;
+.project_container_img .project_img {
+  width: 100%;
+  height: 85%;
+  border-radius: 1vmin;
+  overflow: hidden;
+  -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+}
+
+.project_container_img .project_img img {
+  width: auto;
   height: 100%;
+}
+
+.project_container_img .project_img_overlay {
+  height: 16vmin;
+  position: absolute;
+  left: 5%;
+  top: 22vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.project_container_img .project_img_overlay .project_counter {
+  background-color: black;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.project_container_img .project_img_overlay .project_case_study {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(36, 107, 254, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  animation: slide-out 300ms forwards;
+  -webkit-animation: slide-out 300ms forwards;
+}
+
+.project_container_desc {
+  width: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11320,21 +11381,25 @@ textarea[name="message"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 5%;
 }
 
 .project_container_desc .project_desc_header {
-  padding-left: 5%;
+  height: 22vmin;
+  width: 100%;
+  padding: 5%;
+  position: relative;
+}
+
+.project_container_desc .project_desc_header .project_desc_header-box {
+  position: absolute;
+  bottom: 3vmin;
 }
 
 .project_container_desc .project_desc_chips {
   width: 100%;
-  height: 25%;
+  min-height: 16vmin;
+  height: auto;
   background-color: black;
-  position: absolute;
-  left: 0;
-  top: 37.5%;
-  padding: 2% 5% 2% 5%;
 }
 
 .project_container_desc .project_desc_chips .badge {
@@ -11345,8 +11410,10 @@ textarea[name="message"] {
 }
 
 .project_container_desc .project_desc_links {
-  margin-top: 27%;
-  margin-left: 5%;
+  height: 22vmin;
+  width: 100%;
+  padding-left: 5%;
+  padding-top: 5%;
 }
 
 .project_container_desc .project_desc_links a {
@@ -11367,69 +11434,6 @@ textarea[name="message"] {
   transition: all 150ms ease-in;
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
-}
-
-.project_img {
-  width: 100%;
-  height: 90%;
-  border-radius: 1vmin;
-  overflow: hidden;
-  margin-left: 5%;
-  -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-}
-
-.project_img img {
-  width: auto;
-  height: 100%;
-}
-
-.project_img_overlay {
-  width: 100%;
-  height: 25%;
-  position: absolute;
-  left: 5%;
-  top: 37.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
-}
-
-.project_counter {
-  background-color: black;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 2;
-}
-
-.project_case_study {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(36, 107, 254, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  animation: slide-out 300ms forwards;
-  -webkit-animation: slide-out 300ms forwards;
 }
 
 .project:hover .project_case_study {
@@ -11467,6 +11471,45 @@ textarea[name="message"] {
   }
   100% {
     -webkit-transform: translateX(-150%);
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 1vmin solid black;
+  }
+  .project_img {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .project_img_overlay {
+    width: 90%;
+  }
+  .project_desc_chips {
+    padding: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-left: 1vmin solid black;
+  }
+  .project_img {
+    margin-left: 5%;
+  }
+  .project_img_overlay {
+    width: 100%;
+  }
+  .project_desc_chips {
+    padding: 2% 5% 2% 5%;
   }
 }
 
@@ -11619,7 +11662,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 2;
+    z-index: 3;
     overflow-x: auto;
   }
   .nav__link {
@@ -11802,11 +11845,11 @@ p, h1, h2, h3, h4, h5, h6, label {
 }
 
 img {
-  filter: brightness(90%);
-  -webkit-filter: brightness(90%);
-  -moz-filter: brightness(90%);
-  -o-filter: brightness(90%);
-  -ms-filter: brightness(90%);
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
+  -moz-filter: brightness(80%);
+  -o-filter: brightness(80%);
+  -ms-filter: brightness(80%);
 }
 
 @media (max-width: 1024px) {
@@ -11829,24 +11872,24 @@ img {
 
 @media (min-width: 1024px) {
   p, label {
-    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+    font-size: clamp(16px, calc(0.6vw + 0.6vh), 64px);
   }
   input[type="text"], input[type="email"] {
-    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+    font-size: clamp(16px, calc(0.6vw + 0.6vh), 64px);
   }
   textarea[name="message"] {
-    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+    font-size: clamp(16px, calc(0.6vw + 0.6vh), 64px);
   }
   li {
-    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+    font-size: clamp(16px, calc(0.6vw + 0.6vh), 64px);
   }
   .normal-button {
-    font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
+    font-size: clamp(16px, calc(0.6vw + 0.6vh), 64px);
   }
 }
 
 .badge {
-  font-size: clamp(11px, calc(0.6vw + 0.6vh), 64px);
+  font-size: clamp(13px, calc(0.6vw + 0.6vh), 64px);
 }
 
 h1 {
