@@ -10826,7 +10826,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #1a1b1e;
-  font-family: "Product Sans";
+  font-family: "Product Sans", "Open Sans", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -14,9 +14,9 @@ $primary-color-transparent: #0080ff80;
 $icon--color: #1a1b1e;
 $font--color: #ffffff;
 $font--color-light: #bbbbbb;
-$font--secondary: "JetBrainsMono";
-//$font--primary: "Open Sans";
-$font--primary: "Product Sans";
+$font--coding: 'JetBrainsMono';
+$font--secondary: 'Open Sans';
+$font--primary: 'Product Sans';
 $transition--length: 0.8;
 
 
@@ -86,7 +86,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background--color;
-  font-family: $font--primary;
+  font-family: $font--primary, $font--secondary, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   //font-size: $font_size_small_x;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
