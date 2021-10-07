@@ -186,14 +186,14 @@ input[type]:valid, textarea[name]:valid {
   height: 100vh;
 }
 
-@media (min-width: 992px) {
+@media (orientation: landscape) {
   .content__page {
     padding-left: 12vw;
     padding-right: 12vw;
   }
 }
 
-@media (max-width: 992px) {
+@media (orientation: portrait) {
   .content__page {
     padding-left: 8vw;
     padding-right: 8vw;
@@ -587,21 +587,21 @@ input[type]:valid, textarea[name]:valid {
 
 .project {
   width: 100%;
-  height: auto;
+  height: min-content;
   background-color: $background--color-light;
   border-radius: $border_radius;
   margin-bottom: 3vmax;
-  display: flex;
+  display: grid;
   overflow: hidden;
+  padding-top: 4vmin;
+  padding-bottom: 4vmin;
   transition: all 250ms ease-in;
 }
 
 
-
-
 .project_container_img {
-  width: 100%;
-  height: 60vmin;
+  height: 100%;
+  min-height: 55vmin;
   position: relative;
   display: flex;
   justify-content: center;
@@ -609,22 +609,25 @@ input[type]:valid, textarea[name]:valid {
 
   .project_img {
     width: 100%;
-    height: 85%;
+    height: 100%;
     border-radius: $border_radius;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
     }
   }
   
   .project_img_overlay {
-    height: 16vmin;
+    height: 30%;
+    overflow: auto;
+    margin: auto;
     position: absolute;
-    left: 5%;
-    top: 22vmin;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -654,67 +657,55 @@ input[type]:valid, textarea[name]:valid {
 
 }
 
-#one {
-  background: rgba(#2F80ED, .5);
-
-}
-
-#two {
-  background: $pika_games-color;
-}
-
-#three {
-  background: $eklavya_study-color;
-}
-
-#four {
-  background: rgba(#65BDCB, .5);
-}
-
-
 
 .project_container_desc {
   width: 100%;
   height: auto;
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 
   .project_desc_header {
-    height: 22vmin;
+    height: auto;
     width: 100%;
-    padding: 5%;
     position: relative;
-    
-
-    .project_desc_header-box {
-      position: absolute;
-      bottom: 3vmin;
-    }
+    padding: 2vmin 4vmin;
   }
+
+
+  .chips_container {
+    min-height: 16vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+
 
   .project_desc_chips {
     width: 100%;
-    min-height: 16vmin;
     height: auto;
-    background-color: black;
+    padding: 2vmin 4vmin;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1vmin;
+    column-gap: 1vmin;
 
     .badge {
-      margin-top: 1vmin;
-      margin-right: 1vmin;
+      width: min-content;
       padding: 1vmin 3vmin;
       background-color: $primary-color;
     }
   }
 
   .project_desc_links {
-    height: 22vmin;
+    height: min-content;
     width: 100%;
-    // position: absolute;
-    // bottom: 0;
-    padding-left: 5%;
-    padding-top: 5%;
+    padding: 2vmin 4vmin;
 
     a {
       margin-right: 1vmin;
@@ -743,6 +734,23 @@ input[type]:valid, textarea[name]:valid {
   
 }
 
+
+#one {
+  background: rgba(#2F80ED, .5);
+}
+
+#two {
+  background: $pika_games-color;
+}
+
+#three {
+  background: $eklavya_study-color;
+}
+
+#four {
+  background: rgba(#65BDCB, .5);
+}
+
   
 @keyframes slide-in {
   100% { transform: translateX(0%); }
@@ -762,43 +770,38 @@ input[type]:valid, textarea[name]:valid {
   100% { -webkit-transform: translateX(-150%); }
 }
 
-
-@media (max-width: $media-query-max-width-tablet) {
+@media (orientation: landscape) {
   .project {
-    flex-direction: column;
-    border-top: 1vmin solid black;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .project_img {
-    margin-left: 5%;
-    margin-right: 5%;
+  .project_container_img {
+    padding-left: 4vmin;
   }
 
   .project_img_overlay {
-    width: 90%; 
+    top: 0; left: 4vmin; bottom: 0; right: 0;
   }
 
-  .project_desc_chips {
-    padding: 5%;
-  }
+  
 }
 
-@media (min-width: $media-query-max-width-tablet) {
+@media (orientation: portrait) {
   .project {
-    flex-direction: row;
-    border-left: 1vmin solid black;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .project_img {
-    margin-left: 5%;
+  .project_container_img {
+    padding-left: 4vmin;
+    padding-right: 4vmin;
   }
 
   .project_img_overlay {
-    width: 100%; 
+    top: 0; left: 4vmin; bottom: 0; right: 4vmin;
   }
 
-  .project_desc_chips {
-    padding: 2% 5% 2% 5%;
+  .project_container_desc {
+    padding-top: 4vmin;
   }
 }
 
@@ -895,7 +898,7 @@ footer {
 //                                                                                                                                                              
 //===================================================================================//
 
-@media (min-width: $media-query-max-width-tablet) {
+@media (orientation: landscape) {
   .nav__desktop {
     list-style: none;
     padding: 0;
@@ -905,6 +908,7 @@ footer {
     height: auto;
     position: fixed;
     top: 25%;
+    z-index: 10;
   }
   .nav__desktop li {
     cursor: pointer;
@@ -946,7 +950,7 @@ footer {
 
 }
 
-@media (max-width: $media-query-max-width-tablet) {
+@media (orientation: portrait) {
   .nav__desktop {
     display: none;
   }
@@ -968,7 +972,7 @@ footer {
 //                                                            
 //===================================================================================//
 
-@media (max-width: $media-query-max-width-tablet) {
+@media (orientation: portrait) {
   .nav__mobile {
     position: fixed;
     bottom: 0;
@@ -976,7 +980,7 @@ footer {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     background-color: $primary-color;
     display: flex;
-    z-index: 3;
+    z-index: 10;
     overflow-x: auto;
   }
 
@@ -1016,7 +1020,7 @@ footer {
   }
 }
 
-@media (min-width: $media-query-max-width-tablet) {
+@media (orientation: landscape) {
   .nav__mobile {
     display: none;
   }

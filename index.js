@@ -1,5 +1,49 @@
-
 //@ts-check
+
+function isPortrait() {
+  ///return (screen.orientation.angle == 0 || screen.orientation.angle == 180);
+  return screen.width < screen.height;
+}
+
+document.addEventListener('DOMContentLoaded', configureProjectDimensions, false);
+window.addEventListener('resize', configureProjectDimensions, true);
+
+
+
+
+function configureProjectDimensions() {
+  var projects = document.querySelectorAll(".project");
+  projects.forEach(project => {
+    var counter_view = project.querySelector(".project_img_overlay");
+    var img_container = project.querySelector(".project_container_img");
+
+    var descChips = project.querySelector(".chips_container");
+    var descHeader = project.querySelector(".project_desc_header");
+    var descLinks = project.querySelector(".project_desc_links");
+    
+
+    let chipsStyle = getComputedStyle(descChips);
+    let headerStyle = getComputedStyle(descHeader);
+    let linksStyle = getComputedStyle(descLinks);
+
+    let imgStyle = getComputedStyle(img_container);
+
+    let descHeight = parseInt(chipsStyle.height) + parseInt(headerStyle.height) + parseInt(linksStyle.height);
+    let imgHeight = parseInt(imgStyle.height);
+    
+    counter_view.style.height = chipsStyle.height;
+
+    if(!isPortrait()) {
+      let top = Math.abs((imgHeight-descHeight)/2) + parseInt(headerStyle.height);
+      counter_view.style.marginTop = `${top}px`;
+    } else {
+      counter_view.style.margin = "auto";
+    }
+    
+  });
+}
+
+
 
 const navMobileMenus = document.querySelectorAll(".nav__mobile  .nav__link");
 
