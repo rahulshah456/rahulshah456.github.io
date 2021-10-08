@@ -2,7 +2,7 @@
   "name": "dev-portfolio",
   "version": "1.0.0",
   "description": "Developer Portfolio website",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,11 @@
   "homepage": "https://github.com/rahulshah456/dev-portfolio#readme",
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "popper.js": "^1.16.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^88.2.0",
+    "nodemailer": "^6.6.5",
+    "popper.js": "^1.16.1",
+    "xoauth2": "^1.2.0"
   }
 }

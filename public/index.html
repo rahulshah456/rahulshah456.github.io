@@ -693,14 +693,15 @@
             other request and question, don’t hesitate to contact me uning below
             form either.
           </p>
-          <form id="contact__form">
+          <form id="contact__form" method="POST" action="/sendmail">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label class="color-white" for="inputEmail4">Name</label>
                 <input
-                  type="text"
-                  class="form-control"
                   id="inputName"
+                  name="name"
+                  class="form-control"
+                  type="text"
                   placeholder="Name"
                   autocomplete="off"
                   required=""
@@ -709,9 +710,10 @@
               <div class="form-group col-md-6">
                 <label class="color-white" for="inputPassword4">Email</label>
                 <input
-                  type="email"
-                  class="form-control"
                   id="inputEmail"
+                  name="email"
+                  class="form-control"
+                  type="email"
                   placeholder="Email"
                   autocomplete="off"
                   required=""
@@ -721,9 +723,10 @@
             <div class="form-group">
               <label class="color-white" for="inputAddress">Subject</label>
               <input
+                id="inputSubject"
+                name="subject"
                 type="text"
                 class="form-control"
-                id="inputSubject"
                 placeholder="Subject"
                 autocomplete="off"
                 required=""
@@ -732,11 +735,11 @@
             <div class="form-group">
               <label class="color-white" for="inputAddress2">Message</label>
               <textarea
-                class="form-control"
                 id="inputMessage"
+                name="message"
+                class="form-control"
                 placeholder="Message"
                 autocomplete="off"
-                name="message"
                 required=""
                 rows="5"
               ></textarea>
