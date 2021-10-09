@@ -11340,7 +11340,9 @@ input[type]:valid, textarea[name]:valid {
 
 .project_container_img .project_img img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project_container_img .project_img_overlay {
@@ -11489,22 +11491,45 @@ input[type]:valid, textarea[name]:valid {
   -webkit-animation: slide-in 300ms forwards;
 }
 
-#one {
+#smartsevak {
   background: rgba(47, 128, 237, 0.5);
 }
 
-#two {
+#pikapika {
   background: -webkit-gradient(linear, left top, right top, from(#FFB22A), to(#FF685E));
   background: linear-gradient(to right, #FFB22A, #FF685E);
 }
 
-#three {
+#eklavya {
   background: -webkit-gradient(linear, left top, right top, from(#4BBFAA), to(#BBCD61));
   background: linear-gradient(to right, #4BBFAA, #BBCD61);
 }
 
-#four {
-  background: rgba(101, 189, 203, 0.5);
+#wallset {
+  background-color: rgba(101, 189, 203, 0.5);
+}
+
+#mentorship {
+  background-color: #8C2165;
+}
+
+#mlnavigation {
+  background: -webkit-gradient(linear, left top, right top, from(#4776E6), to(#8E54E9));
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+}
+
+#inn91 {
+  background-color: rgba(246, 134, 51, 0.8);
+}
+
+#liveslider {
+  background: -webkit-gradient(linear, left top, right top, from(#00bf8f), to(#232526));
+  background: linear-gradient(to right, #00bf8f, #232526);
+}
+
+#portfolio {
+  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
+  background: linear-gradient(to right, #414345, #232526);
 }
 
 @keyframes slide-in {
