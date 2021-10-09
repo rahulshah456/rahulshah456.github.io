@@ -619,7 +619,8 @@ input[type]:valid, textarea[name]:valid {
   
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
   
@@ -735,21 +736,53 @@ input[type]:valid, textarea[name]:valid {
 }
 
 
-#one {
+
+
+
+
+
+
+
+
+#smartsevak {
   background: rgba(#2F80ED, .5);
 }
 
-#two {
+#pikapika {
   background: $pika_games-color;
 }
 
-#three {
+#eklavya {
   background: $eklavya_study-color;
 }
 
-#four {
-  background: rgba(#65BDCB, .5);
+#wallset {
+  background-color: rgba(#65BDCB, .5);
 }
+
+#mentorship {
+  background-color: #8C2165;
+}
+
+#mlnavigation {
+  background: $window-app-color;
+}
+
+#inn91 {
+  background-color: rgba(#F68633, .8);
+}
+
+#liveslider {
+  background: $liveslider-color;
+}
+
+#portfolio {
+  background: $folio-web-color;
+}
+
+
+
+
 
   
 @keyframes slide-in {
