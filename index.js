@@ -1,20 +1,36 @@
 //@ts-check
 
 
-//setting imageview sources
+//preview projects
 document.getElementById('thumb_smartsevak').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fsmartsevak.webp?alt=media&token=a870f364-37da-4369-83b5-efe73354026a';
 document.getElementById('thumb_pikagames').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fpikagames.webp?alt=media&token=8b044543-d08f-44dc-8e37-e2a6456b297f';
 document.getElementById('thumb_eklavya').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Feklavya.webp?alt=media&token=9f5c1d61-f183-493e-b83e-45a7cfda033e';
 document.getElementById('thumb_wallset').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fwallset.webp?alt=media&token=7c51e646-cf79-4282-aedf-8c4751f8d184';
-document.getElementById('thumb_pikabrowser').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fbrowser.webp?alt=media&token=d940d5be-7a3c-4c7c-b986-1aa412ba69ff';
-document.getElementById('thumb_mentorship').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Frotated.webp?alt=media&token=c230e226-a5ae-4e01-bb27-556e5926a4ff';
-document.getElementById('thumb_inn91').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Finn91.webp?alt=media&token=2b2606f6-8fd9-4b1c-a974-8651856ddfe3';
-document.getElementById('thumb_mlnavigation').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fmlnavigation.webp?alt=media&token=20966e00-4934-4889-a1d0-e13c03b7b50f';
-document.getElementById('thumb_liveslider').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fliveslider.webp?alt=media&token=097223c9-a421-4ad4-bc6a-dfa50c48277c';
-document.getElementById('thumb_portfolio').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fportfolio.webp?alt=media&token=524452ec-2bf4-49e7-b6e3-fd499bbdb8c1';
+
+//other projects
+if(document.getElementById('thumb_pikabrowser') != null) {
+  document.getElementById('thumb_pikabrowser').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fbrowser.webp?alt=media&token=d940d5be-7a3c-4c7c-b986-1aa412ba69ff';
+}
+if(document.getElementById('thumb_mentorship') != null) {
+  document.getElementById('thumb_mentorship').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Frotated.webp?alt=media&token=c230e226-a5ae-4e01-bb27-556e5926a4ff';
+}
+if(document.getElementById('thumb_inn91') != null) {
+  document.getElementById('thumb_inn91').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Finn91.webp?alt=media&token=2b2606f6-8fd9-4b1c-a974-8651856ddfe3';
+}
+if(document.getElementById('thumb_mlnavigation') != null) {
+  document.getElementById('thumb_mlnavigation').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fmlnavigation.webp?alt=media&token=20966e00-4934-4889-a1d0-e13c03b7b50f';
+}
+if(document.getElementById('thumb_liveslider') != null) {
+  document.getElementById('thumb_liveslider').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fliveslider.webp?alt=media&token=097223c9-a421-4ad4-bc6a-dfa50c48277c';
+}
+
+if(document.getElementById('thumb_portfolio') != null) {
+  document.getElementById('thumb_portfolio').src = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2Fportfolio.webp?alt=media&token=524452ec-2bf4-49e7-b6e3-fd499bbdb8c1';
+}
 
 
-document.addEventListener('DOMContentLoaded', configureProjectDimensions, false);
+
+document.addEventListener('DOMContentLoaded', configureProjectDimensions, true);
 window.addEventListener('resize', configureProjectDimensions, true);
 
 function configureProjectDimensions() {
