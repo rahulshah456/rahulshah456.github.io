@@ -14,32 +14,28 @@ $primary-color-transparent: #0080ff80;
 $icon--color: #1a1b1e;
 $font--color: #ffffff;
 $font--color-light: #bbbbbb;
-$font--coding: 'JetBrainsMono';
-$font--secondary: 'Open Sans';
-$font--primary: 'Product Sans';
+$font--coding: "JetBrainsMono";
+$font--secondary: "Open Sans";
+$font--primary: "Product Sans";
 $transition--length: 0.8;
-
 
 //media query variables
 $media-query-max-width-mobile: 425px;
 $media-query-max-width-tablet: 768px;
 $media-query-max-width-laptop: 1024px;
 
-
 //project gradient colors
-$pika_games-color: linear-gradient(to right,#FFB22A, #FF685E);
-$eklavya_study-color: linear-gradient(to right,#4BBFAA, #BBCD61);
-$pika_browser-color: linear-gradient(to right,#5EAC24,#91DC5A);
-$window-app-color: linear-gradient(to right,#4776E6,#8E54E9);
-$folio-web-color: linear-gradient(to right,#414345,#232526);
-$liveslider-color: linear-gradient(to right,#00bf8f,#232526);
-
+$pika_games-color: linear-gradient(to right, #ffb22a, #ff685e);
+$eklavya_study-color: linear-gradient(to right, #4bbfaa, #bbcd61);
+$pika_browser-color: linear-gradient(to right, #5eac24, #91dc5a);
+$window-app-color: linear-gradient(to right, #4776e6, #8e54e9);
+$folio-web-color: linear-gradient(to right, #414345, #232526);
+$liveslider-color: linear-gradient(to right, #00bf8f, #232526);
 
 //widgets responsive sizes
 $button_margin_h: 2.4vmax;
 $button_margin_v: 1.8vmin;
 $border_radius: 1vmin;
-
 
 //font resonsive sizes
 $font_size_small_x: calc(0.6vw + 0.6vh);
@@ -66,16 +62,15 @@ $font_size_header_x: calc(10vw + 10vh);
 $font_size_header_xx: calc(8vw + 8vh);
 $font_size_header_xxx: calc(6vw + 6vh);
 
-
 //=====================================================================================//
-// 
+//
 // ██████╗ ███████╗███████╗ █████╗ ██╗   ██╗██╗  ████████╗
 // ██╔══██╗██╔════╝██╔════╝██╔══██╗██║   ██║██║  ╚══██╔══╝
-// ██║  ██║█████╗  █████╗  ███████║██║   ██║██║     ██║   
-// ██║  ██║██╔══╝  ██╔══╝  ██╔══██║██║   ██║██║     ██║   
-// ██████╔╝███████╗██║     ██║  ██║╚██████╔╝███████╗██║   
-// ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝                                            
-// 
+// ██║  ██║█████╗  █████╗  ███████║██║   ██║██║     ██║
+// ██║  ██║██╔══╝  ██╔══╝  ██╔══██║██║   ██║██║     ██║
+// ██████╔╝███████╗██║     ██║  ██║╚██████╔╝███████╗██║
+// ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝
+//
 //=====================================================================================//
 
 html {
@@ -86,10 +81,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background--color;
-  font-family: $font--primary, $font--secondary, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: $font--primary, $font--secondary, "Lucida Sans",
+    "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
   //font-size: $font_size_small_x;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: fadeInAnimation ease 800ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 body::-webkit-scrollbar {
@@ -115,7 +115,8 @@ p {
   margin: 0;
 }
 
-input[type], textarea[name] {
+input[type],
+textarea[name] {
   padding: 2.5vmin 2vmin;
   background-color: $background--color;
   border-width: 0.3vmin;
@@ -125,17 +126,27 @@ input[type], textarea[name] {
   transition: background-color 250ms ease-out;
 }
 
-input[type]:focus, textarea[name]:focus, textarea[name]:valid {
+input[type]:focus,
+textarea[name]:focus,
+textarea[name]:valid {
   background-color: $font--color-light;
   border-color: $primary-color;
   color: black;
 }
 
-input[type]:valid, textarea[name]:valid {
+input[type]:valid,
+textarea[name]:valid {
   border-color: #00bf8f;
 }
 
-
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
 
 // textarea[name="message"],input[type] {
 //   background-color: $background--color;
@@ -152,7 +163,6 @@ input[type]:valid, textarea[name]:valid {
 //   background-color: $font--color-light;
 // }
 
-
 // input {
 //   padding: 0.25em 0.5em;
 //   background-color: #fff;
@@ -160,22 +170,18 @@ input[type]:valid, textarea[name]:valid {
 //   border-radius: 4px;
 // }
 
-
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //=====================================================================================//
-// 
-// ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     
-// ██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     
-// ██║  ███╗██║     ██║   ██║██████╔╝███████║██║     
-// ██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     
+//
+// ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗
+// ██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║
+// ██║  ███╗██║     ██║   ██║██████╔╝███████║██║
+// ██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║
 // ╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗
 //  ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-//  
-//=====================================================================================//                                    
+//
+//=====================================================================================//
 
 .content-seperator {
   background-color: rgba(255, 255, 255, 0.199);
@@ -255,7 +261,6 @@ input[type]:valid, textarea[name]:valid {
   }
 }
 
-
 .normal-button {
   margin-top: 1vmax;
   display: flex;
@@ -288,21 +293,17 @@ input[type]:valid, textarea[name]:valid {
   }
 }
 
-
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
+//
 // ██╗  ██╗ ██████╗ ███╗   ███╗███████╗
 // ██║  ██║██╔═══██╗████╗ ████║██╔════╝
-// ███████║██║   ██║██╔████╔██║█████╗  
-// ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝  
+// ███████║██║   ██║██╔████╔██║█████╗
+// ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝
 // ██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗
-// ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝                             
-// 
+// ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+//
 //=====================================================================================//
 
 #container_home {
@@ -316,7 +317,7 @@ input[type]:valid, textarea[name]:valid {
   justify-content: center;
   align-items: center;
   background-image: url(../res/drawables/mobile_frame_white.svg);
-  background-size: 40vmin;                      
+  background-size: 40vmin;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -333,20 +334,17 @@ input[type]:valid, textarea[name]:valid {
   }
 }
 
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
+//
 // ███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
 // ██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
 // ███████╗█████╔╝ ██║██║     ██║     ███████╗
 // ╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
 // ███████║██║  ██╗██║███████╗███████╗███████║
 // ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝
-// 
+//
 //===================================================================================//
 
 #skills {
@@ -365,8 +363,8 @@ input[type]:valid, textarea[name]:valid {
 
 .skills__card:hover,
 .skills__card:focus {
-  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   border-top: 1vmin solid $primary-color;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
   transform: translate(0, -1vmin);
 }
 
@@ -476,20 +474,17 @@ input[type]:valid, textarea[name]:valid {
   }
 }
 
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
+//
 // ███████╗██╗  ██╗██████╗ ███████╗██████╗ ██╗███████╗███╗   ██╗ ██████╗███████╗
 // ██╔════╝╚██╗██╔╝██╔══██╗██╔════╝██╔══██╗██║██╔════╝████╗  ██║██╔════╝██╔════╝
-// █████╗   ╚███╔╝ ██████╔╝█████╗  ██████╔╝██║█████╗  ██╔██╗ ██║██║     █████╗  
-// ██╔══╝   ██╔██╗ ██╔═══╝ ██╔══╝  ██╔══██╗██║██╔══╝  ██║╚██╗██║██║     ██╔══╝  
+// █████╗   ╚███╔╝ ██████╔╝█████╗  ██████╔╝██║█████╗  ██╔██╗ ██║██║     █████╗
+// ██╔══╝   ██╔██╗ ██╔═══╝ ██╔══╝  ██╔══██╗██║██╔══╝  ██║╚██╗██║██║     ██╔══╝
 // ███████╗██╔╝ ██╗██║     ███████╗██║  ██║██║███████╗██║ ╚████║╚██████╗███████╗
-// ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝╚══════╝                                                                            
-// 
+// ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝╚══════╝
+//
 //===================================================================================//
 
 #experience {
@@ -507,8 +502,8 @@ input[type]:valid, textarea[name]:valid {
 .accordion-item {
   margin-bottom: 6vmin;
   background: $background--color-light;
-  box-shadow: 0 0 6px 0 rgba(#202024, .12);
-  transition: all .35s ease;
+  box-shadow: 0 0 6px 0 rgba(#202024, 0.12);
+  transition: all 0.35s ease;
   position: relative;
   //overflow: hidden;
   border-radius: $border_radius;
@@ -516,7 +511,7 @@ input[type]:valid, textarea[name]:valid {
 }
 
 .accordion-item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: calc(0.8vw + 0.8vh);
   height: calc(0.8vw + 0.8vh);
@@ -527,8 +522,6 @@ input[type]:valid, textarea[name]:valid {
   border-radius: 50%;
   z-index: 1;
 }
-
-
 
 .accordion-item:hover,
 .accordion-item:focus {
@@ -563,21 +556,17 @@ input[type]:valid, textarea[name]:valid {
   border-radius: 0 0 $border_radius $border_radius;
 }
 
-
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
+//
 // ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗███████╗
 // ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
 // ██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   ███████╗
 // ██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   ╚════██║
 // ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║
-// ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝                                                                 
-// 
+// ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝
+//
 //===================================================================================//
 
 #projects {
@@ -598,7 +587,6 @@ input[type]:valid, textarea[name]:valid {
   transition: all 250ms ease-in;
 }
 
-
 .project_container_img {
   height: 100%;
   min-height: 55vmin;
@@ -616,14 +604,14 @@ input[type]:valid, textarea[name]:valid {
     align-items: center;
     justify-content: center;
     box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
-  
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  
+
   .project_img_overlay {
     height: 30%;
     overflow: auto;
@@ -635,17 +623,17 @@ input[type]:valid, textarea[name]:valid {
     transition: 250ms ease-in-out;
 
     .project_counter {
-      background-color: black;
+      background-color: #393e46;
       height: 100%;
       display: flex;
       align-items: center;
       z-index: 2;
     }
-    
+
     .project_case_study {
       height: 100%;
       width: 100%;
-      background-color: rgba($primary-color, .8);
+      background-color: rgba($primary-color, 0.8);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -655,9 +643,7 @@ input[type]:valid, textarea[name]:valid {
       -webkit-animation: slide-out 300ms forwards;
     }
   }
-
 }
-
 
 .project_container_desc {
   width: 100%;
@@ -676,16 +662,14 @@ input[type]:valid, textarea[name]:valid {
     padding: 2vmin 4vmin;
   }
 
-
   .chips_container {
     min-height: 16vmin;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #393e46;
   }
-
 
   .project_desc_chips {
     width: 100%;
@@ -711,7 +695,7 @@ input[type]:valid, textarea[name]:valid {
     a {
       margin-right: 1vmin;
       filter: brightness(0.8);
-      
+
       img {
         height: 8vmin;
         width: auto;
@@ -727,25 +711,17 @@ input[type]:valid, textarea[name]:valid {
 }
 
 .project:hover {
-
-  .project_case_study {
-    animation: slide-in 300ms forwards;
-    -webkit-animation: slide-in 300ms forwards;
-  }
-  
+  border-color: $primary-color;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+  transform: translate(0, -1vmin);
+  // .project_case_study {
+  //   animation: slide-in 300ms forwards;
+  //   -webkit-animation: slide-in 300ms forwards;
+  // }
 }
 
-
-
-
-
-
-
-
-
-
 #smartsevak {
-  background: rgba(#2F80ED, .5);
+  background: rgba(#2f80ed, 0.5);
 }
 
 #pikapika {
@@ -757,11 +733,11 @@ input[type]:valid, textarea[name]:valid {
 }
 
 #wallset {
-  background-color: rgba(#65BDCB, .5);
+  background-color: rgba(#65bdcb, 0.5);
 }
 
 #mentorship {
-  background-color: #8C2165;
+  background-color: #8c2165;
 }
 
 #mlnavigation {
@@ -769,7 +745,7 @@ input[type]:valid, textarea[name]:valid {
 }
 
 #inn91 {
-  background-color: rgba(#F68633, .8);
+  background-color: rgba(#f68633, 0.8);
 }
 
 #liveslider {
@@ -780,32 +756,40 @@ input[type]:valid, textarea[name]:valid {
   background: $folio-web-color;
 }
 
-
-
-
-
-  
 @keyframes slide-in {
-  100% { transform: translateX(0%); }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @-webkit-keyframes slide-in {
-  100% { -webkit-transform: translateX(0%); }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
-  
+
 @keyframes slide-out {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-150%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
 }
 
 @-webkit-keyframes slide-out {
-  0% { -webkit-transform: translateX(0%); }
-  100% { -webkit-transform: translateX(-150%); }
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-150%);
+  }
 }
 
 @media (orientation: landscape) {
   .project {
     grid-template-columns: repeat(2, 1fr);
+    border-left: 1vmin solid black;
   }
 
   .project_container_img {
@@ -813,15 +797,17 @@ input[type]:valid, textarea[name]:valid {
   }
 
   .project_img_overlay {
-    top: 0; left: 4vmin; bottom: 0; right: 0;
+    top: 0;
+    left: 4vmin;
+    bottom: 0;
+    right: 0;
   }
-
-  
 }
 
 @media (orientation: portrait) {
   .project {
     grid-template-columns: repeat(1, 1fr);
+    border-top: 1vmin solid black;
   }
 
   .project_container_img {
@@ -830,7 +816,10 @@ input[type]:valid, textarea[name]:valid {
   }
 
   .project_img_overlay {
-    top: 0; left: 4vmin; bottom: 0; right: 4vmin;
+    top: 0;
+    left: 4vmin;
+    bottom: 0;
+    right: 4vmin;
   }
 
   .project_container_desc {
@@ -838,25 +827,17 @@ input[type]:valid, textarea[name]:valid {
   }
 }
 
-
-
-
-
-
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
-// ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+//
+// ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗
 // ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
 // █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
 // ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
 // ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
-// ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝                                                           
-// 
+// ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+//
 //===================================================================================//
 
 footer {
@@ -915,20 +896,17 @@ footer {
   flex-direction: column;
 }
 
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
-// ███╗   ██╗ █████╗ ██╗   ██╗    ██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗ 
+//
+// ███╗   ██╗ █████╗ ██╗   ██╗    ██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗
 // ████╗  ██║██╔══██╗██║   ██║    ██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
 // ██╔██╗ ██║███████║██║   ██║    ██║  ██║█████╗  ███████╗█████╔╝    ██║   ██║   ██║██████╔╝
-// ██║╚██╗██║██╔══██║╚██╗ ██╔╝    ██║  ██║██╔══╝  ╚════██║██╔═██╗    ██║   ██║   ██║██╔═══╝ 
-// ██║ ╚████║██║  ██║ ╚████╔╝     ██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║     
-// ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝      ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  
-//                                                                                                                                                              
+// ██║╚██╗██║██╔══██║╚██╗ ██╔╝    ██║  ██║██╔══╝  ╚════██║██╔═██╗    ██║   ██║   ██║██╔═══╝
+// ██║ ╚████║██║  ██║ ╚████╔╝     ██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║
+// ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝      ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
+//
 //===================================================================================//
 
 @media (orientation: landscape) {
@@ -936,7 +914,7 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    background:$background--color-light;
+    background: $background--color-light;
     display: inline-block;
     height: auto;
     position: fixed;
@@ -971,16 +949,15 @@ footer {
   .nav__desktop li div {
     display: none;
     z-index: 1;
-    background:$primary-color;
+    background: $primary-color;
   }
-  
+
   .nav__desktop li:hover > div {
     display: inline-block;
   }
   .nav__desktop li:hover i {
-    background:$primary-color;
+    background: $primary-color;
   }
-
 }
 
 @media (orientation: portrait) {
@@ -989,20 +966,17 @@ footer {
   }
 }
 
-//----------------------------------------------------------------------------------// 
-
-
-
+//----------------------------------------------------------------------------------//
 
 //===================================================================================//
-// 
+//
 // ███╗   ██╗ █████╗ ██╗   ██╗    ███╗   ███╗ ██████╗ ██████╗ ██╗██╗     ███████╗
 // ████╗  ██║██╔══██╗██║   ██║    ████╗ ████║██╔═══██╗██╔══██╗██║██║     ██╔════╝
-// ██╔██╗ ██║███████║██║   ██║    ██╔████╔██║██║   ██║██████╔╝██║██║     █████╗  
-// ██║╚██╗██║██╔══██║╚██╗ ██╔╝    ██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██╔══╝  
+// ██╔██╗ ██║███████║██║   ██║    ██╔████╔██║██║   ██║██████╔╝██║██║     █████╗
+// ██║╚██╗██║██╔══██║╚██╗ ██╔╝    ██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██╔══╝
 // ██║ ╚████║██║  ██║ ╚████╔╝     ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗███████╗
-// ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝      ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚══════╝                                                                          
-//                                                            
+// ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝      ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚══════╝
+//
 //===================================================================================//
 
 @media (orientation: portrait) {
@@ -1061,20 +1035,15 @@ footer {
 
 //===============================================================================
 
-
-
-
-
-
 //===================================================================================//
-// 
+//
 // █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
 // ██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
-// ███████║██████╔╝██║   ██║██║   ██║   ██║   
-// ██╔══██║██╔══██╗██║   ██║██║   ██║   ██║   
-// ██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
-// ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝                                                            
-// 
+// ███████║██████╔╝██║   ██║██║   ██║   ██║
+// ██╔══██║██╔══██╗██║   ██║██║   ██║   ██║
+// ██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║
+// ╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝
+//
 //===================================================================================//
 
 #about {
@@ -1179,26 +1148,30 @@ footer {
 }
 
 #contact__form {
-	margin-top: 4vmin;
+  margin-top: 4vmin;
 }
 
 //------------------------------------------------------------------------------//
 
-
-
-
 //===================================================================================//
-// 
+//
 // ███████╗ ██████╗ ███╗   ██╗████████╗    ███████╗██╗███████╗███████╗
 // ██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝    ██╔════╝██║╚══███╔╝██╔════╝
-// █████╗  ██║   ██║██╔██╗ ██║   ██║       ███████╗██║  ███╔╝ █████╗  
-// ██╔══╝  ██║   ██║██║╚██╗██║   ██║       ╚════██║██║ ███╔╝  ██╔══╝  
+// █████╗  ██║   ██║██╔██╗ ██║   ██║       ███████╗██║  ███╔╝ █████╗
+// ██╔══╝  ██║   ██║██║╚██╗██║   ██║       ╚════██║██║ ███╔╝  ██╔══╝
 // ██║     ╚██████╔╝██║ ╚████║   ██║       ███████║██║███████╗███████╗
-// ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝       ╚══════╝╚═╝╚══════╝╚══════╝                                        
-// 
+// ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝       ╚══════╝╚═╝╚══════╝╚══════╝
+//
 //===================================================================================//
 
-p,h1,h2,h3,h4,h5,h6,label {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
   filter: brightness(80%);
   -webkit-filter: brightness(80%);
   -moz-filter: brightness(80%);
@@ -1214,54 +1187,52 @@ img {
   -ms-filter: brightness(80%);
 }
 
-
 @media (max-width: $media-query-max-width-laptop) {
+  p,
+  label {
+    font-size: clamp(13px, $font_size_normal_xx, 32px);
+  }
 
-  p,label {
+  input[type="text"],
+  input[type="email"] {
     font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
-  
-  input[type="text"],input[type="email"] {
-    font-size: clamp(13px, $font_size_normal_xx, 32px);
-  }
-  
+
   textarea[name="message"] {
     font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
-  
-  li  {
+
+  li {
     font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
 
   .normal-button {
     font-size: clamp(13px, $font_size_normal_xx, 32px);
   }
-
 }
 
-
 @media (min-width: $media-query-max-width-laptop) {
+  p,
+  label {
+    font-size: clamp(16px, $font_size_small_x, 64px);
+  }
 
-  p,label {
+  input[type="text"],
+  input[type="email"] {
     font-size: clamp(16px, $font_size_small_x, 64px);
   }
-  
-  input[type="text"],input[type="email"] {
-    font-size: clamp(16px, $font_size_small_x, 64px);
-  }
-  
+
   textarea[name="message"] {
     font-size: clamp(16px, $font_size_small_x, 64px);
   }
-  
-  li  {
+
+  li {
     font-size: clamp(16px, $font_size_small_x, 64px);
   }
 
   .normal-button {
     font-size: clamp(16px, $font_size_small_x, 64px);
   }
-
 }
 
 .badge {
@@ -1312,19 +1283,15 @@ h6 {
 
 //-----------------------------------------------------------------------------------//
 
-
-
-
-
 //===================================================================================//
-// 
+//
 // ███████╗ ██████╗ ███╗   ██╗████████╗    ██╗    ██╗███████╗██╗ ██████╗ ██╗  ██╗████████╗
 // ██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝    ██║    ██║██╔════╝██║██╔════╝ ██║  ██║╚══██╔══╝
-// █████╗  ██║   ██║██╔██╗ ██║   ██║       ██║ █╗ ██║█████╗  ██║██║  ███╗███████║   ██║   
-// ██╔══╝  ██║   ██║██║╚██╗██║   ██║       ██║███╗██║██╔══╝  ██║██║   ██║██╔══██║   ██║   
-// ██║     ╚██████╔╝██║ ╚████║   ██║       ╚███╔███╔╝███████╗██║╚██████╔╝██║  ██║   ██║   
-// ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝        ╚══╝╚══╝ ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝                                                    
-// 
+// █████╗  ██║   ██║██╔██╗ ██║   ██║       ██║ █╗ ██║█████╗  ██║██║  ███╗███████║   ██║
+// ██╔══╝  ██║   ██║██║╚██╗██║   ██║       ██║███╗██║██╔══╝  ██║██║   ██║██╔══██║   ██║
+// ██║     ╚██████╔╝██║ ╚████║   ██║       ╚███╔███╔╝███████╗██║╚██████╔╝██║  ██║   ██║
+// ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝        ╚══╝╚══╝ ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
+//
 //===================================================================================//
 
 .italic {
@@ -1332,7 +1299,7 @@ h6 {
 }
 
 .heavy-bold {
-  font-family: 'Product Sans Black';
+  font-family: "Product Sans Black";
 }
 
 .extra-bold {
@@ -1348,35 +1315,32 @@ h6 {
 }
 
 .regular {
-  font-family: 'Product Sans';
+  font-family: "Product Sans";
 }
 
 .medium {
-  font-family: 'Product Sans Medium';
+  font-family: "Product Sans Medium";
 }
 
 .light {
-  font-family: 'Product Sans Light';
+  font-family: "Product Sans Light";
 }
 
 .thin {
-  font-family: 'Product Sans Thin';
+  font-family: "Product Sans Thin";
 }
 
 //--------------------------------------------------------------------------------//
 
-
-
-
 //===================================================================================//
-// 
+//
 // ██████╗ ██████╗ ██╗      ██████╗ ██████╗ ███████╗
 // ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗██╔════╝
 // ██║     ██║   ██║██║     ██║   ██║██████╔╝███████╗
 // ██║     ██║   ██║██║     ██║   ██║██╔══██╗╚════██║
 // ╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║███████║
 //  ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-// 
+//
 //===================================================================================//
 
 .color-primary {
