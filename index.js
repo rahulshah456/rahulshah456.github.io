@@ -1,4 +1,3 @@
-//@ts-check
 
 const BASE_URL = 'https://firebasestorage.googleapis.com/v0/b/walshot-8b648.appspot.com/o/rahulshah456%2F1200_860%2F';
 
